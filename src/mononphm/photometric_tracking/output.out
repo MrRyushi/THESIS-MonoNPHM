@@ -1,0 +1,55 @@
+CUDA_DEVICE=/dev/nvidia/0
+Fri Feb  7 23:27:21 2025       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.105.17   Driver Version: 525.105.17   CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-SXM...  Off  | 00000000:10:00.0 Off |                    0 |
+| N/A   29C    P0    58W / 400W |      0MiB / 81920MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+Module load: anaconda/3-2023.07-2
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/__init__.py", line 2108, in <module>
+    from torch import _VF as _VF, functional as functional  # usort: skip
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/functional.py", line 7, in <module>
+    import torch.nn.functional as F
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/nn/__init__.py", line 8, in <module>
+    from torch.nn.modules import *  # usort: skip # noqa: F403
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/nn/modules/__init__.py", line 1, in <module>
+    from .module import Module  # usort: skip
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/nn/modules/module.py", line 29, in <module>
+    from torch.utils._python_dispatch import is_traceable_wrapper_subclass
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/utils/__init__.py", line 8, in <module>
+    from torch.utils import (
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/utils/data/__init__.py", line 1, in <module>
+    from torch.utils.data.dataloader import (
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 20, in <module>
+    import torch.distributed as dist
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/distributed/__init__.py", line 3, in <module>
+    import pdb
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/pdb.py", line 77, in <module>
+    import code
+  File "/scratch1/sam.caasi/models/MonoNPHM/src/mononphm/photometric_tracking/code.py", line 4, in <module>
+    from tracking import render_image
+  File "/scratch1/sam.caasi/models/MonoNPHM/src/mononphm/photometric_tracking/tracking.py", line 7, in <module>
+    from torch.nn import functional as F
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/nn/functional.py", line 11, in <module>
+    from torch._jit_internal import (
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/_jit_internal.py", line 43, in <module>
+    import torch.distributed.rpc
+  File "/home/sam.caasi/scratch1/miniconda3/envs/step5/lib/python3.10/site-packages/torch/distributed/rpc/__init__.py", line 36, in <module>
+    from torch._C._distributed_c10d import Store
+ModuleNotFoundError: No module named 'torch._C._distributed_c10d'; 'torch._C' is not a package

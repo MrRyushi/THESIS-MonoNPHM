@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/mononphm.egg-info/PKG-INFO
+src/mononphm.egg-info/SOURCES.txt
+src/mononphm.egg-info/dependency_links.txt
+src/mononphm.egg-info/requires.txt
+src/mononphm.egg-info/top_level.txt
