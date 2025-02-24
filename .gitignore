@@ -1,0 +1,32 @@
+# Ignore tracking and output directories
+tracking_input/
+tracking_output/
+training_runs/
+training_supervision_data/
+
+# Ignore model files (if they exist in your repo)
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+*.tflite
+
+# Ignore large dataset files
+*.csv
+*.tsv
+*.json
+*.zip
+*.tar
+*.gz
+
+# Ignore cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Ignore logs and checkpoints
+logs/
+checkpoints/
+wandb/
