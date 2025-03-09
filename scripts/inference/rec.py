@@ -101,7 +101,7 @@ def main(seq_name : str,
          downsample_factor : float = 1/6,
     ):
 
-
+    print("======== PROCESSING: ", seq_name, " ========")
     EXP_NAME = exp_name
     CKPT = ckpt
 

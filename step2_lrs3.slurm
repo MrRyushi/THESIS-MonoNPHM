@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J EN2-L-512
-#SBATCH --partition=gpu
-#SBATCH --qos=gpu-p40_default
+#SBATCH --partition=gpu_a100
+#SBATCH --qos=gpu-a100_default
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem-per-cpu=32GB
@@ -25,7 +25,7 @@ DATASET_DIR="../../tracking_input"
 # Loop through each folder inside DATASET_DIR that starts with "lrs3"
 for folder in "$DATASET_DIR"/lrs3*/; do
     seq_name=$(basename "$folder")
-    echo "Processing: $seq_name"
+    echo "============= PREPROCESSING: $seq_name ============="
     bash run.sh "$seq_name" --no-intrinsics_provided
 done
 

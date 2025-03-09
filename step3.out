@@ -1,0 +1,885 @@
+CUDA_DEVICE=/dev/nvidia/0
+Sun Mar  9 10:49:15 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:4E:00.0 Off |                    0 |
+| N/A   26C    P0             56W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Module load: anaconda/3-2023.07-2
+Skipping lrs30Fi83BHQsMA_00002 (already processed)
+Skipping lrs30Fi83BHQsMA_00004 (already processed)
+Skipping lrs30Fi83BHQsMA_00005 (already processed)
+Skipping lrs30Fi83BHQsMA_00006 (already processed)
+Skipping lrs30gks6ceq4eQ_00002 (already processed)
+Skipping lrs30gks6ceq4eQ_00005 (already processed)
+Skipping lrs30gks6ceq4eQ_00006 (already processed)
+Skipping lrs30gks6ceq4eQ_00007 (already processed)
+Skipping lrs30gks6ceq4eQ_00008 (already processed)
+Skipping lrs30gks6ceq4eQ_00009 (already processed)
+Skipping lrs30gks6ceq4eQ_00010 (already processed)
+Skipping lrs30gks6ceq4eQ_00013 (already processed)
+Skipping lrs30gks6ceq4eQ_00015 (already processed)
+Skipping lrs30iIh5YYDR2o_00001 (already processed)
+Skipping lrs30QVXdEOiCw8_00001 (already processed)
+Skipping lrs30VJqrlH9cdI_00001 (already processed)
+Skipping lrs30VJqrlH9cdI_00002 (already processed)
+Skipping lrs30ZfSOArXbGQ_00001 (already processed)
+Skipping lrs30ZfSOArXbGQ_00002 (already processed)
+Skipping lrs30ZfSOArXbGQ_00003 (already processed)
+Skipping lrs318uDutylDa4_00001 (already processed)
+Skipping lrs318uDutylDa4_00002 (already processed)
+Skipping lrs318uDutylDa4_00004 (already processed)
+Skipping lrs318uDutylDa4_00007 (already processed)
+Skipping lrs318uDutylDa4_00009 (already processed)
+Skipping lrs318uDutylDa4_00010 (already processed)
+Skipping lrs318uDutylDa4_00011 (already processed)
+Skipping lrs31bnzVjOJ6NM_00001 (already processed)
+Skipping lrs31bnzVjOJ6NM_00004 (already processed)
+Skipping lrs31bnzVjOJ6NM_00005 (already processed)
+Skipping lrs31bnzVjOJ6NM_00006 (already processed)
+Skipping lrs31bnzVjOJ6NM_00007 (already processed)
+Skipping lrs31bnzVjOJ6NM_00011 (already processed)
+Skipping lrs31bnzVjOJ6NM_00013 (already processed)
+Skipping lrs31bnzVjOJ6NM_00014 (already processed)
+Skipping lrs31bnzVjOJ6NM_00015 (already processed)
+Skipping lrs31bnzVjOJ6NM_00017 (already processed)
+Skipping lrs31bnzVjOJ6NM_00020 (already processed)
+Skipping lrs31bnzVjOJ6NM_00021 (already processed)
+Skipping lrs31bnzVjOJ6NM_00022 (already processed)
+Skipping lrs31bnzVjOJ6NM_00023 (already processed)
+Skipping lrs31K5SycZjGhI_00001 (already processed)
+Skipping lrs31L6lSFiV4xo_00002 (already processed)
+Skipping lrs31L6lSFiV4xo_00003 (already processed)
+Skipping lrs31PNX6MSdVsk_00001 (already processed)
+Skipping lrs31PNX6MSdVsk_00005 (already processed)
+Skipping lrs31PNX6MSdVsk_00007 (already processed)
+Skipping lrs31PNX6MSdVsk_00009 (already processed)
+Skipping lrs31PNX6MSdVsk_00010 (already processed)
+Skipping lrs31PNX6MSdVsk_00011 (already processed)
+Skipping lrs31US4jjWtua8_00001 (already processed)
+Skipping lrs31US4jjWtua8_00002 (already processed)
+Skipping lrs31US4jjWtua8_00004 (already processed)
+Skipping lrs31US4jjWtua8_00005 (already processed)
+Skipping lrs327lMmdmySb8_00001 (already processed)
+Skipping lrs327lMmdmySb8_00002 (already processed)
+Skipping lrs327lMmdmySb8_00005 (already processed)
+Skipping lrs327lMmdmySb8_00006 (already processed)
+Skipping lrs327lMmdmySb8_00008 (already processed)
+Skipping lrs32SlBiFZ85d0_00002 (already processed)
+Skipping lrs32SlBiFZ85d0_00003 (already processed)
+Skipping lrs32SlBiFZ85d0_00004 (already processed)
+Skipping lrs32SlBiFZ85d0_00006 (already processed)
+Skipping lrs32SlBiFZ85d0_00008 (already processed)
+Skipping lrs32UStOghblfE_00001 (already processed)
+Skipping lrs32UStOghblfE_00002 (already processed)
+Skipping lrs32UStOghblfE_00003 (already processed)
+Skipping lrs32UStOghblfE_00004 (already processed)
+Skipping lrs32UStOghblfE_00005 (already processed)
+Skipping lrs33A1LvXRnpVg_00001 (already processed)
+Skipping lrs33nSEitPb7BU_00001 (already processed)
+Skipping lrs33OgsRa7VDtI_00001 (already processed)
+Skipping lrs33OgsRa7VDtI_00003 (already processed)
+Skipping lrs33OgsRa7VDtI_00004 (already processed)
+Skipping lrs33OgsRa7VDtI_00008 (already processed)
+Skipping lrs33r1IPsldbBg_00002 (already processed)
+Skipping lrs33r1IPsldbBg_00003 (already processed)
+Skipping lrs33uSQlcGCHUU_00001 (already processed)
+Skipping lrs33uSQlcGCHUU_00006 (already processed)
+Skipping lrs33uSQlcGCHUU_00008 (already processed)
+Skipping lrs33uSQlcGCHUU_00011 (already processed)
+Skipping lrs33uSQlcGCHUU_00012 (already processed)
+Skipping lrs33uSQlcGCHUU_00014 (already processed)
+Skipping lrs33uSQlcGCHUU_00015 (already processed)
+Skipping lrs33uSQlcGCHUU_00016 (already processed)
+Skipping lrs33uSQlcGCHUU_00017 (already processed)
+Skipping lrs33vfuCPFb8wk_00001 (already processed)
+Skipping lrs33zqZPujAPuc_00001 (already processed)
+Skipping lrs348xS00Iy0ac_00002 (already processed)
+Skipping lrs348xS00Iy0ac_00003 (already processed)
+Skipping lrs34AYE3w5TWHs_00004 (already processed)
+Skipping lrs34AYE3w5TWHs_00005 (already processed)
+Skipping lrs34AYE3w5TWHs_00006 (already processed)
+Skipping lrs34ErEBkjS3PY_00001 (already processed)
+Skipping lrs34n8qT0vQbWk_00001 (already processed)
+Skipping lrs34n8qT0vQbWk_00003 (already processed)
+Skipping lrs34Q2aznfmcYU_00001 (already processed)
+Skipping lrs34Q2aznfmcYU_00002 (already processed)
+Skipping lrs34v4XxlfVk3o_00001 (already processed)
+Skipping lrs355yGmKc6WfE_00001 (already processed)
+Skipping lrs35b5BDoddOLA_00001 (already processed)
+Skipping lrs35b5BDoddOLA_00002 (already processed)
+Skipping lrs35b5BDoddOLA_00004 (already processed)
+Skipping lrs35ifMRNag2XU_00001 (already processed)
+Skipping lrs35Knz100ldLM_00001 (already processed)
+Skipping lrs35P04stEjJ9E_00003 (already processed)
+Skipping lrs35P04stEjJ9E_00004 (already processed)
+Skipping lrs35P04stEjJ9E_00005 (already processed)
+Skipping lrs35P04stEjJ9E_00006 (already processed)
+Skipping lrs35riPKdpuoiI_00002 (already processed)
+Skipping lrs35Yj3nGv0kn8_00001 (already processed)
+Skipping lrs35Yj3nGv0kn8_00002 (already processed)
+Skipping lrs362cNtvx6P8E_00001 (already processed)
+Skipping lrs366koScWSHBU_00001 (already processed)
+Skipping lrs366koScWSHBU_00003 (already processed)
+Skipping lrs366koScWSHBU_00005 (already processed)
+Skipping lrs366koScWSHBU_00006 (already processed)
+Skipping lrs36kHSuYwt0qs_00002 (already processed)
+Skipping lrs36OaIdwUdSxE_00003 (already processed)
+Skipping lrs36ra1MIKlYB0_00002 (already processed)
+Skipping lrs36Waurx8eS1o_00001 (already processed)
+Skipping lrs36Waurx8eS1o_00003 (already processed)
+Skipping lrs36Waurx8eS1o_00008 (already processed)
+Skipping lrs36wNif5SlN08_00001 (already processed)
+Skipping lrs36wNif5SlN08_00005 (already processed)
+Skipping lrs36wNif5SlN08_00007 (already processed)
+Skipping lrs36wNif5SlN08_00010 (already processed)
+Skipping lrs36wNif5SlN08_00011 (already processed)
+Skipping lrs36wNif5SlN08_00012 (already processed)
+Skipping lrs36wNif5SlN08_00013 (already processed)
+Skipping lrs36wNif5SlN08_00014 (already processed)
+Skipping lrs37gkdzkVbuVA_00001 (already processed)
+Skipping lrs37gkdzkVbuVA_00003 (already processed)
+Skipping lrs37gkdzkVbuVA_00004 (already processed)
+Skipping lrs37gkdzkVbuVA_00005 (already processed)
+Skipping lrs37gXq1ml6B1E_00001 (already processed)
+Skipping lrs37hQ0rgVfsP8_00001 (already processed)
+Skipping lrs37hQ0rgVfsP8_00002 (already processed)
+Skipping lrs37kkRkhAXZGg_00003 (already processed)
+Skipping lrs37kkRkhAXZGg_00004 (already processed)
+Skipping lrs37kkRkhAXZGg_00006 (already processed)
+Skipping lrs37kkRkhAXZGg_00007 (already processed)
+Skipping lrs37kkRkhAXZGg_00010 (already processed)
+Skipping lrs37nZqiPLCvM4_00001 (already processed)
+Skipping lrs37OMLSs8t1ng_00001 (already processed)
+Skipping lrs37OMLSs8t1ng_00002 (already processed)
+Skipping lrs37OMLSs8t1ng_00007 (already processed)
+Skipping lrs37OMLSs8t1ng_00010 (already processed)
+Skipping lrs37OMLSs8t1ng_00012 (already processed)
+Skipping lrs37OMLSs8t1ng_00013 (already processed)
+Skipping lrs37OMLSs8t1ng_00014 (already processed)
+Skipping lrs37OMLSs8t1ng_00017 (already processed)
+Skipping lrs37OMLSs8t1ng_00018 (already processed)
+Skipping lrs37OMLSs8t1ng_00019 (already processed)
+Skipping lrs37qT3RpaBlJo_00001 (already processed)
+Skipping lrs37qT3RpaBlJo_00002 (already processed)
+Skipping lrs37uN4I1wEOXE_00001 (already processed)
+Skipping lrs37ZymFMmpOa0_00002 (already processed)
+Skipping lrs37ZymFMmpOa0_00005 (already processed)
+Skipping lrs37ZymFMmpOa0_00006 (already processed)
+Skipping lrs37ZymFMmpOa0_00007 (already processed)
+Skipping lrs37ZymFMmpOa0_00009 (already processed)
+Skipping lrs37ZymFMmpOa0_00011 (already processed)
+Skipping lrs381Ub0SMxZQo_00001 (already processed)
+Skipping lrs381Ub0SMxZQo_00002 (already processed)
+Skipping lrs381Ub0SMxZQo_00003 (already processed)
+Skipping lrs387AEeLpodnE_00001 (already processed)
+Skipping lrs387AEeLpodnE_00002 (already processed)
+Skipping lrs387AEeLpodnE_00004 (already processed)
+Skipping lrs387AEeLpodnE_00005 (already processed)
+Skipping lrs387AEeLpodnE_00008 (already processed)
+Skipping lrs387AEeLpodnE_00010 (already processed)
+Skipping lrs38GQZuzIdeQQ_00001 (already processed)
+Skipping lrs38GQZuzIdeQQ_00004 (already processed)
+Skipping lrs38HfoKd873HY_00001 (already processed)
+Skipping lrs38iSpNVj5KMw_00001 (already processed)
+Skipping lrs38iSpNVj5KMw_00002 (already processed)
+Skipping lrs38K9Gg164Bsw_00001 (already processed)
+Skipping lrs38mPpe8AL21A_00001 (already processed)
+Skipping lrs38nbeD1mwCdo_00001 (already processed)
+Skipping lrs38nt3edWLgIg_00001 (already processed)
+Skipping lrs38nt3edWLgIg_00003 (already processed)
+Skipping lrs38nt3edWLgIg_00004 (already processed)
+Skipping lrs38nt3edWLgIg_00005 (already processed)
+Skipping lrs38UhqkX2VAmo_00001 (already processed)
+Skipping lrs38vNIrPeRGlM_00001 (already processed)
+Skipping lrs38vNIrPeRGlM_00003 (already processed)
+Skipping lrs38vNIrPeRGlM_00005 (already processed)
+Skipping lrs38vNIrPeRGlM_00009 (already processed)
+Skipping lrs38vNIrPeRGlM_00010 (already processed)
+Skipping lrs38vNIrPeRGlM_00011 (already processed)
+Skipping lrs38VwTZFYSfvw_00001 (already processed)
+Skipping lrs38VwTZFYSfvw_00002 (already processed)
+Skipping lrs38Z24LCysq3A_00001 (already processed)
+Skipping lrs395ovIJ3dsNk_00002 (already processed)
+Skipping lrs395ovIJ3dsNk_00003 (already processed)
+Skipping lrs395ovIJ3dsNk_00005 (already processed)
+Skipping lrs395ovIJ3dsNk_00006 (already processed)
+Skipping lrs395ovIJ3dsNk_00009 (already processed)
+Skipping lrs39B0PaSznWJE_00002 (already processed)
+Skipping lrs39CqVYUOjHLw_00002 (already processed)
+Skipping lrs39JKy6ZfmBn0_00001 (already processed)
+Skipping lrs39JKy6ZfmBn0_00002 (already processed)
+Skipping lrs39kBKQS7J7xI_00001 (already processed)
+Skipping lrs39kBKQS7J7xI_00002 (already processed)
+Skipping lrs39RMx31GnNXY_00001 (already processed)
+Skipping lrs39RMx31GnNXY_00002 (already processed)
+Skipping lrs39RMx31GnNXY_00003 (already processed)
+Skipping lrs39RMx31GnNXY_00004 (already processed)
+Skipping lrs39TPFLHvn024_00002 (already processed)
+Skipping lrs39uOMectkCCs_00001 (already processed)
+Skipping lrs39uOMectkCCs_00002 (already processed)
+Skipping lrs39uOMectkCCs_00004 (already processed)
+Skipping lrs39uOMectkCCs_00005 (already processed)
+Skipping lrs39uOMectkCCs_00007 (already processed)
+Skipping lrs39YekkGz1E2k_00001 (already processed)
+Skipping lrs39YekkGz1E2k_00002 (already processed)
+Skipping lrs3AegIbt2j0sU_00001 (already processed)
+Skipping lrs3akiQuyhXR8o_00001 (already processed)
+Skipping lrs3akiQuyhXR8o_00002 (already processed)
+Skipping lrs3akiQuyhXR8o_00003 (already processed)
+Skipping lrs3akiQuyhXR8o_00004 (already processed)
+Skipping lrs3akiQuyhXR8o_00005 (already processed)
+Skipping lrs3akiQuyhXR8o_00006 (already processed)
+Skipping lrs3akiQuyhXR8o_00007 (already processed)
+Skipping lrs3akiQuyhXR8o_00010 (already processed)
+Skipping lrs3akiQuyhXR8o_00011 (already processed)
+Skipping lrs3AMVgX8cXsHA_00002 (already processed)
+Skipping lrs3AO4In7d6XSc_00001 (already processed)
+Skipping lrs3AO4In7d6XSc_00002 (already processed)
+Skipping lrs3AO4In7d6XSc_00003 (already processed)
+Skipping lrs3aoGJP02CtPA_00002 (already processed)
+Skipping lrs3aoGJP02CtPA_00003 (already processed)
+Skipping lrs3aoGJP02CtPA_00004 (already processed)
+Skipping lrs3aSavBsX60Ss_00001 (already processed)
+Skipping lrs3aSavBsX60Ss_00003 (already processed)
+Skipping lrs3AsSd2nmoKNA_00001 (already processed)
+Skipping lrs3AsSd2nmoKNA_00002 (already processed)
+Skipping lrs3AsSd2nmoKNA_00003 (already processed)
+Skipping lrs3AsSd2nmoKNA_00004 (already processed)
+Skipping lrs3aupPrDnhrKA_00001 (already processed)
+Skipping lrs3aupPrDnhrKA_00002 (already processed)
+Skipping lrs3AWPrOvzzqZk_00002 (already processed)
+Skipping lrs3b6YTQJVzwlI_00001 (already processed)
+Skipping lrs3B8rmi95pYL0_00002 (already processed)
+Skipping lrs3bArH8r8jJ4g_00001 (already processed)
+Skipping lrs3bArH8r8jJ4g_00002 (already processed)
+Skipping lrs3bArH8r8jJ4g_00004 (already processed)
+Skipping lrs3BhMKmovNjvc_00001 (already processed)
+Skipping lrs3BHY0FxzoKZE_00002 (already processed)
+Skipping lrs3BHY0FxzoKZE_00003 (already processed)
+Skipping lrs3BImnT7lcLDE_00001 (already processed)
+Skipping lrs3BImnT7lcLDE_00002 (already processed)
+Skipping lrs3BImnT7lcLDE_00003 (already processed)
+Skipping lrs3BImnT7lcLDE_00004 (already processed)
+Skipping lrs3BImnT7lcLDE_00006 (already processed)
+Skipping lrs3Bo8YN3oB0Cw_00002 (already processed)
+Skipping lrs3Bo8YN3oB0Cw_00003 (already processed)
+Skipping lrs3BQZKs75RMqM_00001 (already processed)
+Skipping lrs3bS6SiVz1R0o_00001 (already processed)
+Skipping lrs3bS6SiVz1R0o_00002 (already processed)
+Skipping lrs3bS6SiVz1R0o_00003 (already processed)
+Skipping lrs3bS6SiVz1R0o_00004 (already processed)
+Skipping lrs3Bs86giWcjLA_00001 (already processed)
+Skipping lrs3Bs86giWcjLA_00002 (already processed)
+Skipping lrs3Bs86giWcjLA_00004 (already processed)
+Skipping lrs3BvpmZktlBFs_00002 (already processed)
+Skipping lrs3BzeTjn0R2VY_00001 (already processed)
+Skipping lrs3BzeTjn0R2VY_00003 (already processed)
+Skipping lrs3BzeTjn0R2VY_00004 (already processed)
+Skipping lrs3c0KYU2j0TM4_00001 (already processed)
+Skipping lrs3c0KYU2j0TM4_00002 (already processed)
+Skipping lrs3c64M1tZyWPM_00001 (already processed)
+Skipping lrs3c64M1tZyWPM_00002 (already processed)
+Skipping lrs3c64M1tZyWPM_00003 (already processed)
+Skipping lrs3c64M1tZyWPM_00004 (already processed)
+Skipping lrs3c9V6OKlY80k_00001 (already processed)
+Skipping lrs3c9V6OKlY80k_00002 (already processed)
+Skipping lrs3CDsNZJTWw0w_00001 (already processed)
+Skipping lrs3CdZJ0SMbh10_00001 (already processed)
+Skipping lrs3CgNx9Bgac1I_00002 (already processed)
+Skipping lrs3CgNx9Bgac1I_00003 (already processed)
+Skipping lrs3cHRZ6OrSvvI_00001 (already processed)
+Skipping lrs3cHRZ6OrSvvI_00002 (already processed)
+Skipping lrs3ClfBxWPkBKU_00001 (already processed)
+Skipping lrs3ClfBxWPkBKU_00003 (already processed)
+Skipping lrs3ClfBxWPkBKU_00005 (already processed)
+Skipping lrs3ClfBxWPkBKU_00008 (already processed)
+Skipping lrs3ClfBxWPkBKU_00009 (already processed)
+Skipping lrs3ClfBxWPkBKU_00010 (already processed)
+Skipping lrs3ClfBxWPkBKU_00011 (already processed)
+Skipping lrs3cmpu58yv8Sg_00001 (already processed)
+Skipping lrs3cmpu58yv8Sg_00002 (already processed)
+Skipping lrs3cmpu58yv8Sg_00004 (already processed)
+Skipping lrs3cmpu58yv8Sg_00005 (already processed)
+Skipping lrs3cmpu58yv8Sg_00007 (already processed)
+Skipping lrs3CxEqV8WtfOo_00001 (already processed)
+Skipping lrs3d3syTrElgcg_00001 (already processed)
+Skipping lrs3d6NKdnZvdoo_00002 (already processed)
+Skipping lrs3d6NKdnZvdoo_00003 (already processed)
+Skipping lrs3D8SSLLnV3W8_00001 (already processed)
+Skipping lrs3DCIL2nvU4x8_00001 (already processed)
+Skipping lrs3DDaldVHUedI_00002 (already processed)
+Skipping lrs3DDaldVHUedI_00003 (already processed)
+Skipping lrs3DDaldVHUedI_00004 (already processed)
+Skipping lrs3DDaldVHUedI_00005 (already processed)
+Skipping lrs3DDaldVHUedI_00006 (already processed)
+Skipping lrs3ddxHlkIuHqg_00001 (already processed)
+Skipping lrs3ddxHlkIuHqg_00002 (already processed)
+Skipping lrs3ddxHlkIuHqg_00004 (already processed)
+Skipping lrs3DjeIpjhAqsM_00002 (already processed)
+Skipping lrs3DjeIpjhAqsM_00003 (already processed)
+Skipping lrs3DOgsYATbVSs_00001 (already processed)
+Skipping lrs3DOgsYATbVSs_00003 (already processed)
+Skipping lrs3DOgsYATbVSs_00004 (already processed)
+Skipping lrs3dS8n24ZwZcQ_00001 (already processed)
+Skipping lrs3dS8n24ZwZcQ_00002 (already processed)
+Skipping lrs3DsrxbqFo41k_00002 (already processed)
+Skipping lrs3dYNc3P4jSt4_00001 (already processed)
+Skipping lrs3dYNc3P4jSt4_00004 (already processed)
+Skipping lrs3dYNc3P4jSt4_00006 (already processed)
+Skipping lrs3dYNc3P4jSt4_00007 (already processed)
+Skipping lrs3dYNc3P4jSt4_00008 (already processed)
+Skipping lrs3E0oPnS7rUwE_00001 (already processed)
+Skipping lrs3E0oPnS7rUwE_00002 (already processed)
+Skipping lrs3E0oPnS7rUwE_00003 (already processed)
+Skipping lrs3E0oPnS7rUwE_00006 (already processed)
+Skipping lrs3E0oPnS7rUwE_00007 (already processed)
+Skipping lrs3E22icGCvGXk_00001 (already processed)
+Skipping lrs3E22icGCvGXk_00004 (already processed)
+Skipping lrs3E22icGCvGXk_00006 (already processed)
+Skipping lrs3EGjxIS5MPUY_00001 (already processed)
+Skipping lrs3emW1TQ290ec_00001 (already processed)
+Skipping lrs3eNAHVnkll5M_00001 (already processed)
+Skipping lrs3eNAHVnkll5M_00002 (already processed)
+Skipping lrs3eNAHVnkll5M_00003 (already processed)
+Skipping lrs3eNAHVnkll5M_00004 (already processed)
+Skipping lrs3eNAHVnkll5M_00005 (already processed)
+Skipping lrs3eNAHVnkll5M_00008 (already processed)
+Skipping lrs3eNAHVnkll5M_00011 (already processed)
+Skipping lrs3eqsXcSaefKI_00001 (already processed)
+Skipping lrs3eqsXcSaefKI_00002 (already processed)
+Skipping lrs3esD6aaIjhek_00001 (already processed)
+Skipping lrs3EV3OmxrowWE_00001 (already processed)
+Skipping lrs3EV3OmxrowWE_00003 (already processed)
+Skipping lrs3EV3OmxrowWE_00004 (already processed)
+Skipping lrs3EV3OmxrowWE_00007 (already processed)
+Skipping lrs3eVFYhbHpfqU_00001 (already processed)
+Skipping lrs3eVFYhbHpfqU_00002 (already processed)
+Skipping lrs3eVFYhbHpfqU_00003 (already processed)
+Skipping lrs3eVFYhbHpfqU_00007 (already processed)
+Skipping lrs3eVFYhbHpfqU_00008 (already processed)
+Skipping lrs3eVFYhbHpfqU_00009 (already processed)
+Skipping lrs3eVFYhbHpfqU_00011 (already processed)
+Skipping lrs3eZj5n8ScTkI_00001 (already processed)
+Skipping lrs3eZj5n8ScTkI_00002 (already processed)
+Skipping lrs3eZj5n8ScTkI_00003 (already processed)
+Skipping lrs3eZj5n8ScTkI_00005 (already processed)
+Skipping lrs3F3OhcpKSUBc_00001 (already processed)
+Skipping lrs3F3OhcpKSUBc_00004 (already processed)
+Skipping lrs3F3OhcpKSUBc_00006 (already processed)
+Skipping lrs3F3OhcpKSUBc_00007 (already processed)
+Skipping lrs3F5h6ynoq8uM_00001 (already processed)
+Skipping lrs3F5h6ynoq8uM_00002 (already processed)
+Skipping lrs3fC9da6eqaqg_00001 (already processed)
+Skipping lrs3FcmSmAwPkxg_00001 (already processed)
+Skipping lrs3FcmSmAwPkxg_00005 (already processed)
+Skipping lrs3FcmSmAwPkxg_00006 (already processed)
+Skipping lrs3FcmSmAwPkxg_00007 (already processed)
+Skipping lrs3FcmSmAwPkxg_00008 (already processed)
+Skipping lrs3FcmSmAwPkxg_00010 (already processed)
+Skipping lrs3FcmSmAwPkxg_00012 (already processed)
+Skipping lrs3FD6CqD1kV8s_00001 (already processed)
+Skipping lrs3FD6CqD1kV8s_00003 (already processed)
+Skipping lrs3FD6CqD1kV8s_00004 (already processed)
+Skipping lrs3FD6CqD1kV8s_00005 (already processed)
+Skipping lrs3FFG2rilqT2g_00003 (already processed)
+Skipping lrs3FFG2rilqT2g_00004 (already processed)
+Skipping lrs3FFG2rilqT2g_00005 (already processed)
+Skipping lrs3fIICVeGW4RY_00001 (already processed)
+Skipping lrs3fIICVeGW4RY_00003 (already processed)
+Skipping lrs3fIICVeGW4RY_00004 (already processed)
+Skipping lrs3fIICVeGW4RY_00006 (already processed)
+Skipping lrs3Fivy99RtMfM_00002 (already processed)
+Skipping lrs3FKxaL8Iau8Q_00001 (already processed)
+Skipping lrs3FKxaL8Iau8Q_00002 (already processed)
+Skipping lrs3FKxaL8Iau8Q_00003 (already processed)
+Skipping lrs3FKxaL8Iau8Q_00007 (already processed)
+Skipping lrs3FmpIMt95ndU_00001 (already processed)
+Skipping lrs3FmpIMt95ndU_00004 (already processed)
+Skipping lrs3FmpIMt95ndU_00005 (already processed)
+Skipping lrs3FQEEMpzPZlY_00001 (already processed)
+Skipping lrs3FqrLUtIFVjs_00001 (already processed)
+Skipping lrs3FqrLUtIFVjs_00002 (already processed)
+Skipping lrs3fscaRh2OtXk_00002 (already processed)
+Skipping lrs3fscaRh2OtXk_00003 (already processed)
+Skipping lrs3fscaRh2OtXk_00004 (already processed)
+Skipping lrs3fTSXvLzNd0o_00002 (already processed)
+Skipping lrs3fxbCHn6gE3U_00001 (already processed)
+Skipping lrs3fxbCHn6gE3U_00003 (already processed)
+Skipping lrs3fxbCHn6gE3U_00005 (already processed)
+Skipping lrs3fxbCHn6gE3U_00007 (already processed)
+Skipping lrs3fxbCHn6gE3U_00008 (already processed)
+Skipping lrs3FxtSMZKMdes_00002 (already processed)
+Skipping lrs3FxtSMZKMdes_00004 (already processed)
+Skipping lrs3FxtSMZKMdes_00005 (already processed)
+Skipping lrs3FxtSMZKMdes_00006 (already processed)
+Skipping lrs3FxtSMZKMdes_00007 (already processed)
+Skipping lrs3FxtSMZKMdes_00009 (already processed)
+Skipping lrs3FxtSMZKMdes_00010 (already processed)
+Skipping lrs3FxtSMZKMdes_00014 (already processed)
+Skipping lrs3FxtSMZKMdes_00015 (already processed)
+Skipping lrs3FxtSMZKMdes_00017 (already processed)
+Skipping lrs3fZ8eyWBQmfU_00001 (already processed)
+Skipping lrs3G2XBIkHW954_00002 (already processed)
+Skipping lrs3GAMR5RDSLJo_00005 (already processed)
+Skipping lrs3GAMR5RDSLJo_00006 (already processed)
+Skipping lrs3GAMR5RDSLJo_00007 (already processed)
+Skipping lrs3GAMR5RDSLJo_00009 (already processed)
+Skipping lrs3GAMR5RDSLJo_00010 (already processed)
+Skipping lrs3GAMR5RDSLJo_00011 (already processed)
+Skipping lrs3GAMR5RDSLJo_00014 (already processed)
+Skipping lrs3GAMR5RDSLJo_00016 (already processed)
+Skipping lrs3GAMR5RDSLJo_00018 (already processed)
+Skipping lrs3GAMR5RDSLJo_00019 (already processed)
+Skipping lrs3GAMR5RDSLJo_00020 (already processed)
+Skipping lrs3GGScU5ESei4_00001 (already processed)
+Skipping lrs3GGScU5ESei4_00004 (already processed)
+Skipping lrs3GGScU5ESei4_00005 (already processed)
+Skipping lrs3GIbz9ms9Z9k_00001 (already processed)
+Skipping lrs3GIbz9ms9Z9k_00003 (already processed)
+Skipping lrs3GIbz9ms9Z9k_00004 (already processed)
+Skipping lrs3Gmai4zkKNcM_00001 (already processed)
+Skipping lrs3Gmai4zkKNcM_00002 (already processed)
+Skipping lrs3Gmai4zkKNcM_00003 (already processed)
+Skipping lrs3Gmai4zkKNcM_00004 (already processed)
+Skipping lrs3Gmai4zkKNcM_00006 (already processed)
+Skipping lrs3Gmai4zkKNcM_00007 (already processed)
+Skipping lrs3GMynksvCcUI_00001 (already processed)
+Skipping lrs3GMynksvCcUI_00002 (already processed)
+Skipping lrs3GMynksvCcUI_00008 (already processed)
+Skipping lrs3GMynksvCcUI_00009 (already processed)
+Skipping lrs3GqnJFm1CS3c_00002 (already processed)
+Skipping lrs3GSf6nijSSdA_00002 (already processed)
+Skipping lrs3GSf6nijSSdA_00003 (already processed)
+Skipping lrs3GSf6nijSSdA_00004 (already processed)
+Skipping lrs3GSf6nijSSdA_00005 (already processed)
+Skipping lrs3GSf6nijSSdA_00007 (already processed)
+Skipping lrs3GSf6nijSSdA_00010 (already processed)
+Skipping lrs3GSf6nijSSdA_00011 (already processed)
+Skipping lrs3gSycQufrgK4_00001 (already processed)
+Skipping lrs3gSycQufrgK4_00002 (already processed)
+Skipping lrs3gtpTd3ywwiE_00001 (already processed)
+Skipping lrs3gVfgkFaswn4_00001 (already processed)
+Skipping lrs3gVfgkFaswn4_00002 (already processed)
+Skipping lrs3gVfgkFaswn4_00003 (already processed)
+Skipping lrs3gVfgkFaswn4_00006 (already processed)
+Skipping lrs3GvGAIGbnX7E_00001 (already processed)
+Skipping lrs3GvGAIGbnX7E_00004 (already processed)
+Skipping lrs3GZadCj8O1S0_00001 (already processed)
+Skipping lrs3H14bBuluwB8_00001 (already processed)
+Skipping lrs3H14bBuluwB8_00002 (already processed)
+Skipping lrs3H9ZOpQzjukY_00001 (already processed)
+Skipping lrs3HbUeAdVXOVc_00001 (already processed)
+Skipping lrs3HD4bpztESWw_00001 (already processed)
+Skipping lrs3HdwOlk6HIVc_00001 (already processed)
+Skipping lrs3HdwOlk6HIVc_00002 (already processed)
+Skipping lrs3HdwOlk6HIVc_00004 (already processed)
+Skipping lrs3HI7zfpitZpo_00002 (already processed)
+Skipping lrs3hiIcwt88o94_00001 (already processed)
+Skipping lrs3hiIcwt88o94_00002 (already processed)
+Skipping lrs3hiIcwt88o94_00003 (already processed)
+Skipping lrs3hiIcwt88o94_00005 (already processed)
+Skipping lrs3hiIcwt88o94_00006 (already processed)
+Skipping lrs3hiIcwt88o94_00008 (already processed)
+Skipping lrs3hiIcwt88o94_00010 (already processed)
+Skipping lrs3hiIcwt88o94_00017 (already processed)
+Skipping lrs3hiIcwt88o94_00018 (already processed)
+Skipping lrs3hiIcwt88o94_00019 (already processed)
+Skipping lrs3hiIcwt88o94_00020 (already processed)
+Skipping lrs3hiIcwt88o94_00023 (already processed)
+Skipping lrs3HiwJ0hNl1Fw_00002 (already processed)
+Skipping lrs3HiwJ0hNl1Fw_00003 (already processed)
+Skipping lrs3Hj9oB4zpHww_00001 (already processed)
+Skipping lrs3Hj9oB4zpHww_00003 (already processed)
+Skipping lrs3HqekWfSJCSA_00002 (already processed)
+Skipping lrs3hQigUH0vZSE_00001 (already processed)
+Skipping lrs3HSercnrqeN4_00001 (already processed)
+Skipping lrs3HSercnrqeN4_00002 (already processed)
+Skipping lrs3HSercnrqeN4_00004 (already processed)
+Skipping lrs3Ht2fzax9wV0_00001 (already processed)
+Skipping lrs3Ht2fzax9wV0_00002 (already processed)
+Skipping lrs3HUM2rCIUdeI_00001 (already processed)
+Skipping lrs3HUM2rCIUdeI_00003 (already processed)
+Skipping lrs3HUM2rCIUdeI_00004 (already processed)
+Skipping lrs3hxsnKwmW0dk_00002 (already processed)
+Skipping lrs3hxsnKwmW0dk_00003 (already processed)
+Skipping lrs3IjbTiRbeNpM_00001 (already processed)
+Skipping lrs3IjbTiRbeNpM_00002 (already processed)
+Skipping lrs3IjbTiRbeNpM_00003 (already processed)
+Skipping lrs3IjbTiRbeNpM_00004 (already processed)
+Skipping lrs3IjbTiRbeNpM_00005 (already processed)
+Skipping lrs3Ip2SQa50uBI_00001 (already processed)
+Skipping lrs3Ip2SQa50uBI_00003 (already processed)
+Skipping lrs3Ip2SQa50uBI_00005 (already processed)
+Skipping lrs3IPBCxlxSSVk_00001 (already processed)
+Skipping lrs3iPE2SiCCo0w_00001 (already processed)
+Skipping lrs3iPE2SiCCo0w_00002 (already processed)
+Skipping lrs3iPE2SiCCo0w_00004 (already processed)
+Skipping lrs3iPE2SiCCo0w_00007 (already processed)
+Skipping lrs3iPE2SiCCo0w_00008 (already processed)
+Skipping lrs3iPE2SiCCo0w_00009 (already processed)
+Skipping lrs3iPE2SiCCo0w_00013 (already processed)
+Skipping lrs3iPE2SiCCo0w_00015 (already processed)
+Skipping lrs3iPE2SiCCo0w_00018 (already processed)
+Skipping lrs3iPE2SiCCo0w_00021 (already processed)
+Skipping lrs3iPE2SiCCo0w_00023 (already processed)
+Skipping lrs3iqEHuBST2qQ_00001 (already processed)
+Skipping lrs3IS4IK8CiLg8_00001 (already processed)
+Skipping lrs3IS4IK8CiLg8_00002 (already processed)
+Skipping lrs3IThAD5yKrgE_00001 (already processed)
+Skipping lrs3IWdzrZdRa38_00001 (already processed)
+Skipping lrs3IWdzrZdRa38_00004 (already processed)
+Skipping lrs3IWdzrZdRa38_00005 (already processed)
+Skipping lrs3IWdzrZdRa38_00006 (already processed)
+Skipping lrs3IWdzrZdRa38_00007 (already processed)
+Skipping lrs3IWdzrZdRa38_00012 (already processed)
+Skipping lrs3j7fRIGphgtk_00001 (already processed)
+Skipping lrs3j7fRIGphgtk_00002 (already processed)
+Skipping lrs3j7fRIGphgtk_00004 (already processed)
+Skipping lrs3j7fRIGphgtk_00005 (already processed)
+Skipping lrs3J8FyHI00ELY_00001 (already processed)
+Skipping lrs3J8FyHI00ELY_00002 (already processed)
+Skipping lrs3J8FyHI00ELY_00004 (already processed)
+Skipping lrs3J8FyHI00ELY_00005 (already processed)
+Skipping lrs3J8FyHI00ELY_00006 (already processed)
+Skipping lrs3J8FyHI00ELY_00008 (already processed)
+Skipping lrs3J8FyHI00ELY_00009 (already processed)
+Skipping lrs3jbHpF7EySck_00001 (already processed)
+Skipping lrs3jbHpF7EySck_00002 (already processed)
+Skipping lrs3Jc9RdbHEFa0_00001 (already processed)
+Skipping lrs3JcJ3MfJNm6g_00001 (already processed)
+Skipping lrs3jcp5vvxtEaU_00001 (already processed)
+Skipping lrs3jcp5vvxtEaU_00002 (already processed)
+Skipping lrs3jcp5vvxtEaU_00004 (already processed)
+Skipping lrs3jcp5vvxtEaU_00006 (already processed)
+Skipping lrs3jcp5vvxtEaU_00008 (already processed)
+Skipping lrs3jcp5vvxtEaU_00009 (already processed)
+Skipping lrs3jcp5vvxtEaU_00010 (already processed)
+Skipping lrs3jcp5vvxtEaU_00011 (already processed)
+Running inference for: lrs3jcp5vvxtEaU_00012
+/home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/torch_geometric/typing.py:54: UserWarning: An issue occurred while importing 'pyg-lib'. Disabling its usage. Stacktrace: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/libpyg.so)
+  warnings.warn(f"An issue occurred while importing 'pyg-lib'. "
+/home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/torch_geometric/typing.py:110: UserWarning: An issue occurred while importing 'torch-sparse'. Disabling its usage. Stacktrace: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/libpyg.so)
+  warnings.warn(f"An issue occurred while importing 'torch-sparse'. "
+======== PROCESSING:  lrs3jcp5vvxtEaU_00012  ========
+{
+    "decoder": {
+        "decoder_nloc": 65,
+        "ex": {
+            "hidden_dim": 400,
+            "lat_dim_ex": 100,
+            "lat_dim_id": 16,
+            "mode": "compress",
+            "nhyper": 2,
+            "nlayers": 6
+        },
+        "id": {
+            "blend_std": 3.75,
+            "gnn": {
+                "hidden_dim_app": 200,
+                "hidden_dim_geo": 200,
+                "nfreq_bands_app": 0,
+                "nfreq_bands_geo": 0,
+                "nlayers_app": 4,
+                "nlayers_geo": 4
+            },
+            "head": {
+                "hidden_dim_app": 128,
+                "hidden_dim_geo": 128,
+                "lat_dim_app_aggr": 256,
+                "lat_dim_geo_aggr": 256,
+                "nlayers_app": 2,
+                "nlayers_geo": 2
+            },
+            "lat_dim_glob": 64,
+            "lat_dim_loc_app": 32,
+            "lat_dim_loc_geo": 32,
+            "nloc": 65,
+            "nneigh": 8,
+            "nsymm_pairs": 30
+        }
+    },
+    "training": {
+        "batch_size": 16,
+        "ckpt_interval": 250,
+        "grad_clip": 1.0,
+        "grad_clip_lat": 1.0,
+        "lambdas": {
+            "anchors": 7.5,
+            "color": 1.0,
+            "corresp": 1000.0,
+            "eikonal": 0.15,
+            "hyper": 0.1,
+            "loss_neutral_zero": 0.001,
+            "loss_reg_zero": 0.0025,
+            "lpips": 0.1,
+            "middle_dist": 0.0,
+            "middle_dist_app": 0,
+            "normals": 0.3,
+            "reg_app": 0.005,
+            "reg_app_var": 3e-07,
+            "reg_expr": 0.05,
+            "reg_expr_var": 3e-08,
+            "reg_shape": 0.01,
+            "reg_shape_var": 3e-08,
+            "space_sdf": 0.01,
+            "surf_sdf": 1.0,
+            "symm_dist": 0.01,
+            "symm_dist_app": 0.0001
+        },
+        "loss_type": "igr",
+        "lr": 0.0005,
+        "lr_decay_factor": 0.5,
+        "lr_decay_factor_lat": 0.5,
+        "lr_decay_interval": 500,
+        "lr_decay_interval_lat": 500,
+        "lr_lat": 0.002,
+        "lr_lat_expr": 0.01,
+        "mode": "shape_space",
+        "npatches_per_batch": 1,
+        "npoints_corresp": 250,
+        "npoints_face": 1000,
+        "npoints_non_face": 250,
+        "npoints_off_surface": 250,
+        "sigma_near": 0.01,
+        "weight_decay": 0.0005
+    }
+}
+FOUND 1 GPUs
+ANCHORS HAVE SHAPE:  torch.Size([1, 1, 65, 3])
+creating DeepSDF with...
+lat dim 116
+hidden_dim 400
+Creating DeepSDF with input dim f119, hidden_dim f400 and output_dim 5
+total_points torch.Size([1, 56801, 3])
+total_points torch.Size([1, 56931, 3])
+total_points torch.Size([1, 56748, 3])
+total_points torch.Size([1, 57249, 3])
+total_points torch.Size([1, 57485, 3])
+total_points torch.Size([1, 57437, 3])
+total_points torch.Size([1, 57024, 3])
+total_points torch.Size([1, 57724, 3])
+total_points torch.Size([1, 57218, 3])
+total_points torch.Size([1, 57101, 3])
+total_points torch.Size([1, 57631, 3])
+total_points torch.Size([1, 56825, 3])
+total_points torch.Size([1, 57219, 3])
+total_points torch.Size([1, 57650, 3])
+total_points torch.Size([1, 57721, 3])
+total_points torch.Size([1, 57716, 3])
+total_points torch.Size([1, 57758, 3])
+total_points torch.Size([1, 57324, 3])
+total_points torch.Size([1, 56923, 3])
+total_points torch.Size([1, 57046, 3])
+total_points torch.Size([1, 57036, 3])
+total_points torch.Size([1, 57776, 3])
+total_points torch.Size([1, 57248, 3])
+total_points torch.Size([1, 56863, 3])
+total_points torch.Size([1, 57039, 3])
+total_points torch.Size([1, 57242, 3])
+total_points torch.Size([1, 57348, 3])
+total_points torch.Size([1, 57017, 3])
+total_points torch.Size([1, 56941, 3])
+total_points torch.Size([1, 57202, 3])
+total_points torch.Size([1, 57202, 3])
+total_points torch.Size([1, 57095, 3])
+total_points torch.Size([1, 57129, 3])
+total_points torch.Size([1, 57127, 3])
+total_points torch.Size([1, 57362, 3])
+total_points torch.Size([1, 57360, 3])
+total_points torch.Size([1, 57583, 3])
+total_points torch.Size([1, 57503, 3])
+total_points torch.Size([1, 58306, 3])
+total_points torch.Size([1, 58209, 3])
+total_points torch.Size([1, 57850, 3])
+total_points torch.Size([1, 57700, 3])
+total_points torch.Size([1, 57857, 3])
+total_points torch.Size([1, 57961, 3])
+total_points torch.Size([1, 58332, 3])
+total_points torch.Size([1, 58828, 3])
+total_points torch.Size([1, 58885, 3])
+total_points torch.Size([1, 58883, 3])
+total_points torch.Size([1, 59051, 3])
+total_points torch.Size([1, 58973, 3])
+total_points torch.Size([1, 58189, 3])
+total_points torch.Size([1, 58846, 3])
+total_points torch.Size([1, 58529, 3])
+total_points torch.Size([1, 58471, 3])
+total_points torch.Size([1, 58890, 3])
+total_points torch.Size([1, 59099, 3])
+total_points torch.Size([1, 59099, 3])
+total_points torch.Size([1, 58945, 3])
+total_points torch.Size([1, 59003, 3])
+total_points torch.Size([1, 59034, 3])
+total_points torch.Size([1, 58688, 3])
+total_points torch.Size([1, 58725, 3])
+total_points torch.Size([1, 58787, 3])
+total_points torch.Size([1, 58681, 3])
+total_points torch.Size([1, 58537, 3])
+total_points torch.Size([1, 58548, 3])
+total_points torch.Size([1, 58641, 3])
+total_points torch.Size([1, 58324, 3])
+total_points torch.Size([1, 58628, 3])
+total_points torch.Size([1, 58415, 3])
+total_points torch.Size([1, 58170, 3])
+total_points torch.Size([1, 58508, 3])
+total_points torch.Size([1, 58375, 3])
+Running inference for: lrs3jcSSY9rDN2g_00001
+/home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/torch_geometric/typing.py:54: UserWarning: An issue occurred while importing 'pyg-lib'. Disabling its usage. Stacktrace: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/libpyg.so)
+  warnings.warn(f"An issue occurred while importing 'pyg-lib'. "
+/home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/torch_geometric/typing.py:110: UserWarning: An issue occurred while importing 'torch-sparse'. Disabling its usage. Stacktrace: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/libpyg.so)
+  warnings.warn(f"An issue occurred while importing 'torch-sparse'. "
+======== PROCESSING:  lrs3jcSSY9rDN2g_00001  ========
+{
+    "decoder": {
+        "decoder_nloc": 65,
+        "ex": {
+            "hidden_dim": 400,
+            "lat_dim_ex": 100,
+            "lat_dim_id": 16,
+            "mode": "compress",
+            "nhyper": 2,
+            "nlayers": 6
+        },
+        "id": {
+            "blend_std": 3.75,
+            "gnn": {
+                "hidden_dim_app": 200,
+                "hidden_dim_geo": 200,
+                "nfreq_bands_app": 0,
+                "nfreq_bands_geo": 0,
+                "nlayers_app": 4,
+                "nlayers_geo": 4
+            },
+            "head": {
+                "hidden_dim_app": 128,
+                "hidden_dim_geo": 128,
+                "lat_dim_app_aggr": 256,
+                "lat_dim_geo_aggr": 256,
+                "nlayers_app": 2,
+                "nlayers_geo": 2
+            },
+            "lat_dim_glob": 64,
+            "lat_dim_loc_app": 32,
+            "lat_dim_loc_geo": 32,
+            "nloc": 65,
+            "nneigh": 8,
+            "nsymm_pairs": 30
+        }
+    },
+    "training": {
+        "batch_size": 16,
+        "ckpt_interval": 250,
+        "grad_clip": 1.0,
+        "grad_clip_lat": 1.0,
+        "lambdas": {
+            "anchors": 7.5,
+            "color": 1.0,
+            "corresp": 1000.0,
+            "eikonal": 0.15,
+            "hyper": 0.1,
+            "loss_neutral_zero": 0.001,
+            "loss_reg_zero": 0.0025,
+            "lpips": 0.1,
+            "middle_dist": 0.0,
+            "middle_dist_app": 0,
+            "normals": 0.3,
+            "reg_app": 0.005,
+            "reg_app_var": 3e-07,
+            "reg_expr": 0.05,
+            "reg_expr_var": 3e-08,
+            "reg_shape": 0.01,
+            "reg_shape_var": 3e-08,
+            "space_sdf": 0.01,
+            "surf_sdf": 1.0,
+            "symm_dist": 0.01,
+            "symm_dist_app": 0.0001
+        },
+        "loss_type": "igr",
+        "lr": 0.0005,
+        "lr_decay_factor": 0.5,
+        "lr_decay_factor_lat": 0.5,
+        "lr_decay_interval": 500,
+        "lr_decay_interval_lat": 500,
+        "lr_lat": 0.002,
+        "lr_lat_expr": 0.01,
+        "mode": "shape_space",
+        "npatches_per_batch": 1,
+        "npoints_corresp": 250,
+        "npoints_face": 1000,
+        "npoints_non_face": 250,
+        "npoints_off_surface": 250,
+        "sigma_near": 0.01,
+        "weight_decay": 0.0005
+    }
+}
+FOUND 1 GPUs
+ANCHORS HAVE SHAPE:  torch.Size([1, 1, 65, 3])
+creating DeepSDF with...
+lat dim 116
+hidden_dim 400
+Creating DeepSDF with input dim f119, hidden_dim f400 and output_dim 5
+total_points torch.Size([1, 56054, 3])
+total_points torch.Size([1, 56245, 3])
+total_points torch.Size([1, 56318, 3])
+total_points torch.Size([1, 55994, 3])
+total_points torch.Size([1, 55978, 3])
+total_points torch.Size([1, 56028, 3])
+total_points torch.Size([1, 58440, 3])
+total_points torch.Size([1, 57166, 3])
+total_points torch.Size([1, 57302, 3])
+total_points torch.Size([1, 56564, 3])
+total_points torch.Size([1, 56012, 3])
+total_points torch.Size([1, 56120, 3])
+total_points torch.Size([1, 56088, 3])
+total_points torch.Size([1, 55906, 3])
+total_points torch.Size([1, 56698, 3])
+total_points torch.Size([1, 56771, 3])
+total_points torch.Size([1, 57204, 3])
+total_points torch.Size([1, 57388, 3])
+total_points torch.Size([1, 56472, 3])
+total_points torch.Size([1, 56752, 3])
+total_points torch.Size([1, 57036, 3])
+total_points torch.Size([1, 56960, 3])
+total_points torch.Size([1, 57582, 3])
+total_points torch.Size([1, 57644, 3])
+total_points torch.Size([1, 58681, 3])
+total_points torch.Size([1, 57470, 3])
+total_points torch.Size([1, 56820, 3])
+total_points torch.Size([1, 56916, 3])
+total_points torch.Size([1, 57040, 3])
+total_points torch.Size([1, 56734, 3])
+total_points torch.Size([1, 57822, 3])
+total_points torch.Size([1, 57182, 3])
+total_points torch.Size([1, 58264, 3])
+total_points torch.Size([1, 59070, 3])
+total_points torch.Size([1, 59583, 3])
+total_points torch.Size([1, 60767, 3])
+total_points torch.Size([1, 60124, 3])
+total_points torch.Size([1, 60676, 3])
+total_points torch.Size([1, 60388, 3])
+total_points torch.Size([1, 58352, 3])
+total_points torch.Size([1, 58165, 3])
+total_points torch.Size([1, 58664, 3])
+total_points torch.Size([1, 57610, 3])
+total_points torch.Size([1, 57142, 3])
+total_points torch.Size([1, 57404, 3])
+Running inference for: lrs3jcSSY9rDN2g_00002
+/home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/torch_geometric/typing.py:54: UserWarning: An issue occurred while importing 'pyg-lib'. Disabling its usage. Stacktrace: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/libpyg.so)
+  warnings.warn(f"An issue occurred while importing 'pyg-lib'. "
+/home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/torch_geometric/typing.py:110: UserWarning: An issue occurred while importing 'torch-sparse'. Disabling its usage. Stacktrace: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/libpyg.so)
+  warnings.warn(f"An issue occurred while importing 'torch-sparse'. "

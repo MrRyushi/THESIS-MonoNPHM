@@ -199,7 +199,7 @@ def render_image(idr, expression, condition, sh_coeffs, in_dict, n_batch_points=
                 out_dict = idr(cur_in_dict, condition, compute_non_convergent=True, neus_variance=variance,
                                pose_params=[pose_params[0], pose_params[1], pose_params[2]],
                                sh_coeffs=sh_coeffs)#, debug_plot=chunk_i==0)
-                print('hi')
+                # print('hi')
 
                 torch.cuda.empty_cache()
 
@@ -226,7 +226,7 @@ def render_image(idr, expression, condition, sh_coeffs, in_dict, n_batch_points=
                                }
                 out_dict = idr(cur_in_dict, expression, compute_non_convergent=True, neus_variance=variance,
                                pose_params=[pose_params[0], pose_params[1], pose_params[2]])  # , debug_plot=chunk_i==0)
-                print('hi')
+                # print('hi')
 
                 torch.cuda.empty_cache()
 
@@ -260,7 +260,7 @@ def render_image(idr, expression, condition, sh_coeffs, in_dict, n_batch_points=
     weights_sum = np.reshape(_weights_sum, [h, w]).astype(np.float32)
     weights_img = ((np.tile(np.reshape(_weights_sum, [h, w]).astype(np.float32)[:, :, np.newaxis], [1, 1, 3])/1)*255).astype(np.uint8)
 
-    print('DEPTH:', depths.min(), depths.max())
+    # print('DEPTH:', depths.min(), depths.max())
 
     #depths = ((np.clip((np.tile(np.reshape(depths, [h, w]).astype(np.float32)[:, :, np.newaxis], [1, 1, 3]) - 2.25)/ (2.92-2.25), 0, 1) )*255).astype(np.uint8)
 
@@ -992,7 +992,7 @@ class Tracker:
     def render_progress(self, data_manager : SimpleDataManager,
                         variance, epoch,
                         ):
-        print("self latent code = ", self.latent_code['geo'])
+        # print("self latent code = ", self.latent_code['geo'])
         can_anchors = self.idr.implicit_network.monoNPHM.id_model.get_anchors(self.latent_code['geo'])
 
         #print("can_anchors = ", can_anchors)
@@ -1307,7 +1307,7 @@ def track(net, cfg, subject, expressions, out_dir, out_dir_stage1=None,  fix_id=
                 else:
                     epoch_mult = 0.1
 
-    print(f'USING EPOCH MULT OF: {epoch_mult}')
+    # print(f'USING EPOCH MULT OF: {epoch_mult}')
 
     n_epochs = int(cfg['opt']['n_epochs']*epoch_mult*len(expressions))
 
@@ -1396,7 +1396,7 @@ def track(net, cfg, subject, expressions, out_dir, out_dir_stage1=None,  fix_id=
 
         print_str += f' LM loss: {loss_backwarp.item()}'
 
-        print(print_str)
+        # print(print_str)
 
 
         # render current revconstruction state for debugging purposes

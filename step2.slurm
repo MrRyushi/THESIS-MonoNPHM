@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J EN2-L-512
-#SBATCH --partition=gpu_a100
-#SBATCH --qos=gpu-a100_default
+#SBATCH --partition=gpu
+#SBATCH --qos=gpu-p40_default
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem-per-cpu=32GB
@@ -32,7 +32,7 @@ for folder in "$DATASET_DIR"/*/; do
     # Check if the prefix starts with "63"
     if [[ "$prefix" == 63* ]]; then
         # Compare as a string to avoid number conversion issues
-        if [[ "$prefix" > "634138" ]]; then
+        if [[ "$prefix" > "633031" ]]; then
             echo "Processing: $seq_name"
             bash run.sh "$seq_name" --no-intrinsics_provided
         else
