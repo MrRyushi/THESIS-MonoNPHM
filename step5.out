@@ -1,24 +1,24 @@
 CUDA_DEVICE=/dev/nvidia/0
-Mon Mar 17 22:22:03 2025       
-+-----------------------------------------------------------------------------+
-| NVIDIA-SMI 470.239.06   Driver Version: 470.239.06   CUDA Version: 11.4     |
-|-------------------------------+----------------------+----------------------+
-| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
-|                               |                      |               MIG M. |
-|===============================+======================+======================|
-|   0  Tesla P40           Off  | 00000000:82:00.0 Off |                    0 |
-| N/A   34C    P0    47W / 250W |      0MiB / 22919MiB |      1%      Default |
-|                               |                      |                  N/A |
-+-------------------------------+----------------------+----------------------+
-                                                                               
-+-----------------------------------------------------------------------------+
-| Processes:                                                                  |
-|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
-|        ID   ID                                                   Usage      |
-|=============================================================================|
-|  No running processes found                                                 |
-+-----------------------------------------------------------------------------+
+Tue Mar 18 19:56:11 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:0B:00.0 Off |                    0 |
+| N/A   25C    P0             58W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
 Module load: anaconda/3-2023.07-2
 Processing: tracking_output/pretrained_mononphm_original/stage2/6330311066473698535_00011/00000
 Processing: tracking_output/pretrained_mononphm_original/stage2/6330311066473698535_00011/00001
@@ -84,3 +84,43 @@ Processing: tracking_output/pretrained_mononphm_original/stage2/6330311066473698
 Processing: tracking_output/pretrained_mononphm_original/stage2/6330311066473698535_00011/00061
 Video saved to ../datasets/face_pose_transformed/lrs2_face_transformed/6330311066473698535_00011/6330311066473698535_00011.mp4
 Transcript saved to ../datasets/face_pose_transformed/lrs2_face_transformed/6330311066473698535_00011/6330311066473698535_00011.txt
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00000
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00001
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00002
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00003
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00004
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00005
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00006
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00007
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00008
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00009
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00010
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00011
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00012
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00013
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00014
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00015
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00016
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00017
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00018
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00019
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00020
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00021
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00022
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00023
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00024
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00025
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00026
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00027
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00028
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00029
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00030
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00031
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00032
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00033
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00034
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00035
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00036
+Processing: tracking_output/pretrained_mononphm_original/stage2/6334934169140712754_00068/00037
+Video saved to ../datasets/face_pose_transformed/lrs2_face_transformed/6334934169140712754_00068/6334934169140712754_00068.mp4
+Transcript saved to ../datasets/face_pose_transformed/lrs2_face_transformed/6334934169140712754_00068/6334934169140712754_00068.txt

@@ -1,0 +1,154 @@
+CUDA_DEVICE=/dev/nvidia/0
+Tue Mar 18 15:26:09 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:48:00.0 Off |                    0 |
+| N/A   35C    P0             58W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Module load: anaconda/3-2023.07-2
+/home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/torch_geometric/typing.py:54: UserWarning: An issue occurred while importing 'pyg-lib'. Disabling its usage. Stacktrace: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/libpyg.so)
+  warnings.warn(f"An issue occurred while importing 'pyg-lib'. "
+/home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/torch_geometric/typing.py:110: UserWarning: An issue occurred while importing 'torch-sparse'. Disabling its usage. Stacktrace: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/libpyg.so)
+  warnings.warn(f"An issue occurred while importing 'torch-sparse'. "
+======== PROCESSING:  6334934169140712754_00068  ========
+{
+    "decoder": {
+        "decoder_nloc": 65,
+        "ex": {
+            "hidden_dim": 400,
+            "lat_dim_ex": 100,
+            "lat_dim_id": 16,
+            "mode": "compress",
+            "nhyper": 2,
+            "nlayers": 6
+        },
+        "id": {
+            "blend_std": 3.75,
+            "gnn": {
+                "hidden_dim_app": 200,
+                "hidden_dim_geo": 200,
+                "nfreq_bands_app": 0,
+                "nfreq_bands_geo": 0,
+                "nlayers_app": 4,
+                "nlayers_geo": 4
+            },
+            "head": {
+                "hidden_dim_app": 128,
+                "hidden_dim_geo": 128,
+                "lat_dim_app_aggr": 256,
+                "lat_dim_geo_aggr": 256,
+                "nlayers_app": 2,
+                "nlayers_geo": 2
+            },
+            "lat_dim_glob": 64,
+            "lat_dim_loc_app": 32,
+            "lat_dim_loc_geo": 32,
+            "nloc": 65,
+            "nneigh": 8,
+            "nsymm_pairs": 30
+        }
+    },
+    "training": {
+        "batch_size": 16,
+        "ckpt_interval": 250,
+        "grad_clip": 1.0,
+        "grad_clip_lat": 1.0,
+        "lambdas": {
+            "anchors": 7.5,
+            "color": 1.0,
+            "corresp": 1000.0,
+            "eikonal": 0.15,
+            "hyper": 0.1,
+            "loss_neutral_zero": 0.001,
+            "loss_reg_zero": 0.0025,
+            "lpips": 0.1,
+            "middle_dist": 0.0,
+            "middle_dist_app": 0,
+            "normals": 0.3,
+            "reg_app": 0.005,
+            "reg_app_var": 3e-07,
+            "reg_expr": 0.05,
+            "reg_expr_var": 3e-08,
+            "reg_shape": 0.01,
+            "reg_shape_var": 3e-08,
+            "space_sdf": 0.01,
+            "surf_sdf": 1.0,
+            "symm_dist": 0.01,
+            "symm_dist_app": 0.0001
+        },
+        "loss_type": "igr",
+        "lr": 0.0005,
+        "lr_decay_factor": 0.5,
+        "lr_decay_factor_lat": 0.5,
+        "lr_decay_interval": 500,
+        "lr_decay_interval_lat": 500,
+        "lr_lat": 0.002,
+        "lr_lat_expr": 0.01,
+        "mode": "shape_space",
+        "npatches_per_batch": 1,
+        "npoints_corresp": 250,
+        "npoints_face": 1000,
+        "npoints_non_face": 250,
+        "npoints_off_surface": 250,
+        "sigma_near": 0.01,
+        "weight_decay": 0.0005
+    }
+}
+FOUND 1 GPUs
+ANCHORS HAVE SHAPE:  torch.Size([1, 1, 65, 3])
+creating DeepSDF with...
+lat dim 116
+hidden_dim 400
+Creating DeepSDF with input dim f119, hidden_dim f400 and output_dim 5
+total_points torch.Size([1, 95612, 3])
+total_points torch.Size([1, 95619, 3])
+total_points torch.Size([1, 95869, 3])
+total_points torch.Size([1, 96058, 3])
+total_points torch.Size([1, 95946, 3])
+total_points torch.Size([1, 95977, 3])
+total_points torch.Size([1, 95930, 3])
+total_points torch.Size([1, 95876, 3])
+total_points torch.Size([1, 95818, 3])
+total_points torch.Size([1, 95862, 3])
+total_points torch.Size([1, 95860, 3])
+total_points torch.Size([1, 95960, 3])
+total_points torch.Size([1, 95844, 3])
+total_points torch.Size([1, 96075, 3])
+total_points torch.Size([1, 96136, 3])
+total_points torch.Size([1, 96006, 3])
+total_points torch.Size([1, 95915, 3])
+total_points torch.Size([1, 95766, 3])
+total_points torch.Size([1, 95716, 3])
+total_points torch.Size([1, 95675, 3])
+total_points torch.Size([1, 95733, 3])
+total_points torch.Size([1, 95674, 3])
+total_points torch.Size([1, 95455, 3])
+total_points torch.Size([1, 95402, 3])
+total_points torch.Size([1, 95351, 3])
+total_points torch.Size([1, 95336, 3])
+total_points torch.Size([1, 95296, 3])
+total_points torch.Size([1, 95246, 3])
+total_points torch.Size([1, 95346, 3])
+total_points torch.Size([1, 95379, 3])
+total_points torch.Size([1, 95415, 3])
+total_points torch.Size([1, 95504, 3])
+total_points torch.Size([1, 95549, 3])
+total_points torch.Size([1, 95615, 3])
+total_points torch.Size([1, 95558, 3])
+total_points torch.Size([1, 95623, 3])
+total_points torch.Size([1, 95760, 3])
+total_points torch.Size([1, 95826, 3])

@@ -7,7 +7,7 @@
 #SBATCH --mem-per-cpu=32GB
 #SBATCH -G 1
 #SBATCH --job-name="mononphm"
-#SBATCH --output=output.out
+#SBATCH --output=step5.out
 #SBATCH --ntasks=1
 
 echo "CUDA_DEVICE=/dev/nvidia/$CUDA_VISIBLE_DEVICES"

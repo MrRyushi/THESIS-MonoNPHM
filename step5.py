@@ -8,8 +8,8 @@ import cv2
 os.environ["PYOPENGL_PLATFORM"] = "egl"  # Or use 'osmesa' if EGL fails
 
 # Base paths
-stage2_dir = "../models/MonoNPHM/tracking_output/pretrained_mononphm_original/stage2"
-tracking_input_dir = "../models/MonoNPHM/tracking_input"
+stage2_dir = "tracking_output/pretrained_mononphm_original/stage2"
+tracking_input_dir = "tracking_input"
 output_base_dir = "../datasets/face_pose_transformed/lrs2_face_transformed"
 os.makedirs(output_base_dir, exist_ok=True)
 

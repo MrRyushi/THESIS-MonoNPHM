@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem-per-cpu=32GB
 #SBATCH -G 1
-#SBATCH --job-name="step3_lrs2"
+#SBATCH --job-name="s3_lrs2"
 #SBATCH --output=step3_lrs2.out
 #SBATCH --ntasks=1
 
