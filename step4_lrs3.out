@@ -2257,3 +2257,2429 @@ torch.Size([37, 37])
 tensor(212)
 foreground_index.shape: torch.Size([688])
 Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1265])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2266])
+Mask min/max: 0 13
+Checking mask for expression 22, view 0
+torch.Size([37, 37])
+tensor(732)
+foreground_index.shape: torch.Size([2147])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2668])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2229])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([3025])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1293])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1910])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3212])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1665])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([2956])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2584])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2495])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2492])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2910])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2227])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1448])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3224])
+Mask min/max: 0 13
+Checking mask for expression 31, view 0
+torch.Size([37, 37])
+tensor(1038)
+foreground_index.shape: torch.Size([2583])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2728])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1487])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1231])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2794])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2922])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2439])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2722])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2255])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3122])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1890])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([1006])
+Mask min/max: 0 13
+Checking mask for expression 31, view 0
+torch.Size([37, 37])
+tensor(1038)
+foreground_index.shape: torch.Size([2627])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1164])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1264])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1209])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2963])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1184])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([418])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3197])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2977])
+Mask min/max: 0 13
+Checking mask for expression 22, view 0
+torch.Size([37, 37])
+tensor(732)
+foreground_index.shape: torch.Size([2161])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([935])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2821])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2891])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2282])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2531])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3404])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2905])
+Mask min/max: 0 13
+Checking mask for expression 37, view 0
+torch.Size([37, 37])
+tensor(1464)
+foreground_index.shape: torch.Size([3156])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1796])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2590])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([693])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2271])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2511])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1731])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2803])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3373])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1896])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1194])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2901])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3122])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1795])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1884])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2902])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1207])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([2013])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1227])
+Mask min/max: 0 13
+Checking mask for expression 31, view 0
+torch.Size([37, 37])
+tensor(1038)
+foreground_index.shape: torch.Size([2483])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1781])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2856])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2329])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1416])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3133])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3154])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2521])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2561])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2638])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1205])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2561])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([880])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2402])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2219])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([772])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2278])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2589])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([939])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([3049])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1876])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([976])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3205])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2938])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2237])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2575])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2249])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1667])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1243])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3158])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2895])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([2023])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1980])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2489])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2922])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3232])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1928])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3380])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([614])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([937])
+Mask min/max: 0 13
+Checking mask for expression 37, view 0
+torch.Size([37, 37])
+tensor(1464)
+foreground_index.shape: torch.Size([3110])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([422])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([638])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2213])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3251])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3179])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3168])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2267])
+Mask min/max: 0 13
+Checking mask for expression 22, view 0
+torch.Size([37, 37])
+tensor(732)
+foreground_index.shape: torch.Size([2154])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([1947])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3229])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1473])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1444])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2957])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1820])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2559])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1958])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3232])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1887])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1700])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2897])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2196])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1819])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1879])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3210])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([739])
+Mask min/max: 0 13
+Checking mask for expression 22, view 0
+torch.Size([37, 37])
+tensor(732)
+foreground_index.shape: torch.Size([2184])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([3026])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2197])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([1981])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1243])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1215])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1803])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2312])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1874])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2796])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2883])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2587])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1804])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1474])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2884])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2733])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3141])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([788])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2208])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1869])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2203])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1723])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2878])
+Mask min/max: 0 13
+Checking mask for expression 14, view 0
+torch.Size([37, 37])
+tensor(531)
+foreground_index.shape: torch.Size([1301])
+Mask min/max: 0 13
+Checking mask for expression 22, view 0
+torch.Size([37, 37])
+tensor(732)
+foreground_index.shape: torch.Size([2149])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1766])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3295])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2888])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([653])
+Mask min/max: 0 13
+Checking mask for expression 22, view 0
+torch.Size([37, 37])
+tensor(732)
+foreground_index.shape: torch.Size([2186])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2967])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2607])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1440])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1877])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2700])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([913])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([684])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1909])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2788])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2688])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2198])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([711])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3162])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1842])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([2012])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2959])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2261])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2964])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2906])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2606])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([1996])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2882])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2822])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([1026])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1495])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([1985])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([3029])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([1990])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2949])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1776])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2717])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1482])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3108])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3140])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1772])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2631])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1422])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([3131])
+Mask min/max: 0 13
+Checking mask for expression 22, view 0
+torch.Size([37, 37])
+tensor(732)
+foreground_index.shape: torch.Size([2158])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2810])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1704])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1855])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2930])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1413])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3137])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1385])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3353])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1702])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([633])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([3033])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2794])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1212])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([696])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2255])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2853])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([2048])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1735])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3345])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2562])
+Mask min/max: 0 13
+Checking mask for expression 37, view 0
+torch.Size([37, 37])
+tensor(1464)
+foreground_index.shape: torch.Size([3167])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2864])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2154])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1931])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2537])
+Mask min/max: 0 13
+Checking mask for expression 22, view 0
+torch.Size([37, 37])
+tensor(732)
+foreground_index.shape: torch.Size([2184])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1474])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1788])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([756])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2510])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2233])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3205])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3356])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1137])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([1023])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3294])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2323])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([642])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([2993])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2922])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2552])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([1919])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2232])
+Mask min/max: 0 13
+Checking mask for expression 31, view 0
+torch.Size([37, 37])
+tensor(1038)
+foreground_index.shape: torch.Size([2491])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3282])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1465])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1839])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2175])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2911])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2569])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([395])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2963])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2838])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2632])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2514])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1239])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([428])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2305])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([1010])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([745])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3149])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1251])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2237])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2947])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([891])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1451])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1206])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2641])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2510])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2621])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1769])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([700])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([1998])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2906])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1838])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([922])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2551])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1420])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([2018])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1875])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3369])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1466])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1189])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3207])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2256])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1259])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3238])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3255])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1461])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2662])
+Mask min/max: 0 13
+Checking mask for expression 31, view 0
+torch.Size([37, 37])
+tensor(1038)
+foreground_index.shape: torch.Size([2591])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([780])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([888])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2236])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([2047])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1868])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2600])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1416])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3262])
+Mask min/max: 0 13
+Checking mask for expression 37, view 0
+torch.Size([37, 37])
+tensor(1464)
+foreground_index.shape: torch.Size([3082])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1834])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1864])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([776])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2400])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3149])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1648])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([3011])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2653])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2832])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2903])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2623])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([2089])
+Mask min/max: 0 13
+Checking mask for expression 14, view 0
+torch.Size([37, 37])
+tensor(531)
+foreground_index.shape: torch.Size([1318])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2929])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1465])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2571])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([698])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1881])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2289])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3148])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2948])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([666])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3383])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2843])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2213])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([649])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2742])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([1995])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2803])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2594])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2995])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1780])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([1974])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([1992])
+Mask min/max: 0 13
+Checking mask for expression 22, view 0
+torch.Size([37, 37])
+tensor(732)
+foreground_index.shape: torch.Size([2136])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([421])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2857])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2638])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([1952])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3090])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([3009])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2504])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([754])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2910])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2306])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2714])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1444])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([2028])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1469])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([2036])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2858])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3105])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2853])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1418])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1835])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([997])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([655])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1796])
+Mask min/max: 0 13
+Checking mask for expression 14, view 0
+torch.Size([37, 37])
+tensor(531)
+foreground_index.shape: torch.Size([1310])
+Mask min/max: 0 13
+Checking mask for expression 37, view 0
+torch.Size([37, 37])
+tensor(1464)
+foreground_index.shape: torch.Size([3159])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2321])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2229])
+Mask min/max: 0 13
+Checking mask for expression 31, view 0
+torch.Size([37, 37])
+tensor(1038)
+foreground_index.shape: torch.Size([2535])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1933])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1912])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2525])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([406])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2901])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([2994])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([690])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1853])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2858])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([2020])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2261])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([997])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([754])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([920])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1218])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2602])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2807])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1247])
+Mask min/max: 0 13
+Checking mask for expression 37, view 0
+torch.Size([37, 37])
+tensor(1464)
+foreground_index.shape: torch.Size([3085])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2725])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1224])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1483])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3413])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1437])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1770])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1430])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([673])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1775])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1742])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3087])
+Mask min/max: 0 13
+Checking mask for expression 37, view 0
+torch.Size([37, 37])
+tensor(1464)
+foreground_index.shape: torch.Size([3141])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([937])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1864])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2298])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2690])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3237])
+Mask min/max: 0 13
+Checking mask for expression 31, view 0
+torch.Size([37, 37])
+tensor(1038)
+foreground_index.shape: torch.Size([2513])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3107])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2951])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1860])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1678])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3267])
+Mask min/max: 0 13
+Checking mask for expression 37, view 0
+torch.Size([37, 37])
+tensor(1464)
+foreground_index.shape: torch.Size([3184])
+Mask min/max: 0 13
+Checking mask for expression 22, view 0
+torch.Size([37, 37])
+tensor(732)
+foreground_index.shape: torch.Size([2199])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([3003])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1655])
+Mask min/max: 0 13
+Checking mask for expression 37, view 0
+torch.Size([37, 37])
+tensor(1464)
+foreground_index.shape: torch.Size([3115])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([939])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([888])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1493])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([406])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([2048])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2869])
+Mask min/max: 0 13
+Checking mask for expression 14, view 0
+torch.Size([37, 37])
+tensor(531)
+foreground_index.shape: torch.Size([1300])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1781])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1470])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([920])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1265])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2920])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2232])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1715])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1224])
+Mask min/max: 0 13
+Checking mask for expression 14, view 0
+torch.Size([37, 37])
+tensor(531)
+foreground_index.shape: torch.Size([1298])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2880])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([874])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([693])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3137])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([900])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([1982])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1222])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1217])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([897])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2512])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2311])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1190])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2543])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2956])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2543])
+Mask min/max: 0 13
+Checking mask for expression 14, view 0
+torch.Size([37, 37])
+tensor(531)
+foreground_index.shape: torch.Size([1306])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1490])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
+torch.Size([37, 37])
+tensor(973)
+foreground_index.shape: torch.Size([2589])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3215])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1944])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([399])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2851])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2638])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2825])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1696])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([764])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([407])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1835])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2855])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([620])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1476])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1226])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([408])
+Mask min/max: 0 13
+Checking mask for expression 37, view 0
+torch.Size([37, 37])
+tensor(1464)
+foreground_index.shape: torch.Size([3200])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([3003])
+Mask min/max: 0 13
+Checking mask for expression 7, view 0
+torch.Size([37, 37])
+tensor(743)
+foreground_index.shape: torch.Size([1420])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([2074])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1875])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1236])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2891])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3292])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([1013])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3411])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([3004])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1839])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([1965])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2763])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([671])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3097])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1768])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([644])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1686])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2293])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([2013])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([679])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2861])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([403])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2510])
+Mask min/max: 0 13
+Checking mask for expression 33, view 0
