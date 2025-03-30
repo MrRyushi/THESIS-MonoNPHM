@@ -83,6 +83,7 @@ def prepare_data(timestep=None,
     try:
         rgb = Image.open(f'{env_paths.DATA_TRACKING}/{seq_name}/source/{timestep:05d}.png') #TODO
         facer_mask = Image.open(f'{env_paths.DATA_TRACKING}/{seq_name}/seg/{timestep}.png')
+        print(f"Loaded facer_mask from: {env_paths.DATA_TRACKING}/{seq_name}/seg/{timestep}.png")
     except Exception as fehler:
         rgb = Image.open(f'{env_paths.KINECT_DATA}/{seq_name}/color/{timestep:05d}.png')
         facer_mask = Image.open(f'{env_paths.KINECT_DATA2}/{seq_name}/seg/{timestep}.png')
@@ -96,14 +97,45 @@ def prepare_data(timestep=None,
     facer_mask = np.array(facer_mask)
     matting_mask = np.array(matting_mask)
 
+    num_nonzero = np.count_nonzero(matting_mask)
+    num_total = matting_mask.size
+    percent_nonzero = (num_nonzero / num_total) * 100
+
+    print(f"Step 2.13: Non-zero pixels: {num_nonzero}/{num_total} ({percent_nonzero:.2f}%)")
+
+    print("Step 1: Raw facer_mask unique values:", np.unique(facer_mask))
+    print("Step 2.1: Raw facer_mask unique values before filtering:", np.unique(facer_mask))
+
     # shrink hair region where matting is not as confident to be foreground
     rgb_loss_mask = (np.logical_not( (facer_mask == 3) |(facer_mask <= 1) | (facer_mask == 18)) | (facer_mask==14))
     if np.max(facer_mask) > 14:
         rgb_loss_mask = rgb_loss_mask & ~(facer_mask == np.max(facer_mask))
     foreground_mask = rgb_loss_mask | (facer_mask == 1)  # include neck
-    foreground_mask = foreground_mask & (matting_mask > 0.8*255)
+    print("Step 2.6: Unique values in foreground_mask BEFORE matting threshold:", np.unique(foreground_mask))
+    print("Step 2.4: Unique values in matting_mask:", np.unique(matting_mask))
+    print("Step 2.5: Min/Max matting_mask:", np.min(matting_mask), np.max(matting_mask))
+    print("Step 2.8: Pixels above 127 in matting_mask:", np.sum(matting_mask > 127))
+    print("Step 2.9: Pixels above 50 in matting_mask:", np.sum(matting_mask > 50))
+    threshold = np.percentile(matting_mask, 50)  # Get the 50th percentile value
+    print(f"Step 2.10: Dynamic threshold used: {threshold}")
+    p10 = np.percentile(matting_mask, 10)
+    p25 = np.percentile(matting_mask, 25)
+    p50 = np.percentile(matting_mask, 50)
+    p75 = np.percentile(matting_mask, 75)
+    p90 = np.percentile(matting_mask, 90)
+
+    print(f"Step 2.12: Percentile values in matting_mask -> 10th: {p10}, 25th: {p25}, 50th: {p50}, 75th: {p75}, 90th: {p90}")
+
+
+    #foreground_mask = foreground_mask & (matting_mask > threshold)
+    print("Step 2.11: Unique values in foreground_mask AFTER dynamic threshold:", np.unique(foreground_mask))
+
+    foreground_mask = foreground_mask & (matting_mask > 0.8 * 255)  # 127 instead of 204
+
+    print("Step 2.7: Unique values in foreground_mask AFTER matting threshold:", np.unique(foreground_mask))
     facer_mask[~foreground_mask] = 0
 
+    print("Step 2.2: Unique values in facer_mask AFTER filtering:", np.unique(facer_mask))
     # mouth interior
     mouth_interior_mask = facer_mask == 11
 
@@ -171,6 +203,11 @@ def prepare_data(timestep=None,
     # compute forground mask
     mouth_interior_mask = np.array(mouth_interior_mask)
     facer_mask = np.array(facer_mask)
+
+    print("Raw facer_mask min/max before filtering:", facer_mask.min(), facer_mask.max())
+    print("Unique values in facer_mask:", np.unique(facer_mask))
+
+
     rgb_loss_mask = np.logical_not((facer_mask == 3) | (facer_mask <= 1))#| (facer_mask == max_class))
     foreground_mask = rgb_loss_mask | (facer_mask == 1)  | (facer_mask == 14)# include neck and hair
     facer_mask[~foreground_mask] = 0
@@ -280,6 +317,11 @@ def prepare_data(timestep=None,
     mouth_interior_mask = torch.from_numpy(mouth_interior_mask).reshape(-1)
     facer_mask = torch.from_numpy(facer_mask).reshape(-1)
     facer_mask_hq = torch.from_numpy(facer_mask_hq).reshape(-1)
+
+    print("facer_mask type:", type(facer_mask))
+    print("facer_mask shape before flattening:", facer_mask.shape)
+    print("facer_mask min/max before conversion:", facer_mask.min(), facer_mask.max())
+
 
 
     view_dirs = torch.from_numpy(view_dirs)

@@ -1,0 +1,2259 @@
+CUDA_DEVICE=/dev/nvidia/0
+Sun Mar 30 15:18:03 2025       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.239.06   Driver Version: 470.239.06   CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla P40           Off  | 00000000:82:00.0 Off |                    0 |
+| N/A   29C    P0    46W / 250W |      0MiB / 22919MiB |      1%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+Module load: anaconda/3-2023.07-2
+Running inference for: lrs30Fi83BHQsMA_00002
+/home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/torch_geometric/typing.py:54: UserWarning: An issue occurred while importing 'pyg-lib'. Disabling its usage. Stacktrace: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/libpyg.so)
+  warnings.warn(f"An issue occurred while importing 'pyg-lib'. "
+/home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/torch_geometric/typing.py:110: UserWarning: An issue occurred while importing 'torch-sparse'. Disabling its usage. Stacktrace: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/sam.caasi/.conda/envs/mononphm/lib/python3.9/site-packages/libpyg.so)
+  warnings.warn(f"An issue occurred while importing 'torch-sparse'. "
+======== PROCESSING:  lrs30Fi83BHQsMA_00002  ========
+{
+    "decoder": {
+        "decoder_nloc": 65,
+        "ex": {
+            "hidden_dim": 400,
+            "lat_dim_ex": 100,
+            "lat_dim_id": 16,
+            "mode": "compress",
+            "nhyper": 2,
+            "nlayers": 6
+        },
+        "id": {
+            "blend_std": 3.75,
+            "gnn": {
+                "hidden_dim_app": 200,
+                "hidden_dim_geo": 200,
+                "nfreq_bands_app": 0,
+                "nfreq_bands_geo": 0,
+                "nlayers_app": 4,
+                "nlayers_geo": 4
+            },
+            "head": {
+                "hidden_dim_app": 128,
+                "hidden_dim_geo": 128,
+                "lat_dim_app_aggr": 256,
+                "lat_dim_geo_aggr": 256,
+                "nlayers_app": 2,
+                "nlayers_geo": 2
+            },
+            "lat_dim_glob": 64,
+            "lat_dim_loc_app": 32,
+            "lat_dim_loc_geo": 32,
+            "nloc": 65,
+            "nneigh": 8,
+            "nsymm_pairs": 30
+        }
+    },
+    "training": {
+        "batch_size": 16,
+        "ckpt_interval": 250,
+        "grad_clip": 1.0,
+        "grad_clip_lat": 1.0,
+        "lambdas": {
+            "anchors": 7.5,
+            "color": 1.0,
+            "corresp": 1000.0,
+            "eikonal": 0.15,
+            "hyper": 0.1,
+            "loss_neutral_zero": 0.001,
+            "loss_reg_zero": 0.0025,
+            "lpips": 0.1,
+            "middle_dist": 0.0,
+            "middle_dist_app": 0,
+            "normals": 0.3,
+            "reg_app": 0.005,
+            "reg_app_var": 3e-07,
+            "reg_expr": 0.05,
+            "reg_expr_var": 3e-08,
+            "reg_shape": 0.01,
+            "reg_shape_var": 3e-08,
+            "space_sdf": 0.01,
+            "surf_sdf": 1.0,
+            "symm_dist": 0.01,
+            "symm_dist_app": 0.0001
+        },
+        "loss_type": "igr",
+        "lr": 0.0005,
+        "lr_decay_factor": 0.5,
+        "lr_decay_factor_lat": 0.5,
+        "lr_decay_interval": 500,
+        "lr_decay_interval_lat": 500,
+        "lr_lat": 0.002,
+        "lr_lat_expr": 0.01,
+        "mode": "shape_space",
+        "npatches_per_batch": 1,
+        "npoints_corresp": 250,
+        "npoints_face": 1000,
+        "npoints_non_face": 250,
+        "npoints_off_surface": 250,
+        "sigma_near": 0.01,
+        "weight_decay": 0.0005
+    }
+}
+FOUND 1 GPUs
+ANCHORS HAVE SHAPE:  torch.Size([1, 1, 65, 3])
+creating DeepSDF with...
+lat dim 116
+hidden_dim 400
+Creating DeepSDF with input dim f119, hidden_dim f400 and output_dim 5
+EXPRESSION:  0
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/0.png
+Step 2.13: Non-zero pixels: 11865/50176 (23.65%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 9038
+Step 2.9: Pixels above 50 in matting_mask: 9688
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 0.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2 11 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  1
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/1.png
+Step 2.13: Non-zero pixels: 12518/50176 (24.95%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  5  6  7  8  9 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  5  6  7  8  9 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 9789
+Step 2.9: Pixels above 50 in matting_mask: 10367
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 0.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  2
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/2.png
+Step 2.13: Non-zero pixels: 10235/50176 (20.40%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 7364
+Step 2.9: Pixels above 50 in matting_mask: 8052
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 0.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2 11 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  3
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/3.png
+Step 2.13: Non-zero pixels: 15501/50176 (30.89%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 10708
+Step 2.9: Pixels above 50 in matting_mask: 11630
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 19.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2 10 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2 10 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  4
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/4.png
+Step 2.13: Non-zero pixels: 10268/50176 (20.46%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7  8  9 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7  8  9 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 7165
+Step 2.9: Pixels above 50 in matting_mask: 7723
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 0.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2 11 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  5
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/5.png
+Step 2.13: Non-zero pixels: 12734/50176 (25.38%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 9293
+Step 2.9: Pixels above 50 in matting_mask: 10070
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 1.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2 10 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2 10 11 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  6
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/6.png
+Step 2.13: Non-zero pixels: 16527/50176 (32.94%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 11813
+Step 2.9: Pixels above 50 in matting_mask: 12641
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 57.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  6 10 11 12 13 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2 10 11 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  7
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/7.png
+Step 2.13: Non-zero pixels: 16668/50176 (33.22%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 11820
+Step 2.9: Pixels above 50 in matting_mask: 12797
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 64.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  6 10 11 12 13 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  6 10 11 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  8
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/8.png
+Step 2.13: Non-zero pixels: 18793/50176 (37.45%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 13201
+Step 2.9: Pixels above 50 in matting_mask: 14158
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 190.25, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2 10 11 12 13 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2 10 11 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  9
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/9.png
+Step 2.13: Non-zero pixels: 19641/50176 (39.14%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 13790
+Step 2.9: Pixels above 50 in matting_mask: 15003
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 209.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5 10 11 12 13 15]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2  5 10 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  10
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/10.png
+Step 2.13: Non-zero pixels: 23024/50176 (45.89%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 18791
+Step 2.9: Pixels above 50 in matting_mask: 19834
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5  6  7 10 11 12 13 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5  6  7 10 11 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  11
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/11.png
+Step 2.13: Non-zero pixels: 21070/50176 (41.99%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 17048
+Step 2.9: Pixels above 50 in matting_mask: 17866
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 253.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5  6 10 11 12 13 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5  6 10 11 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  12
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/12.png
+Step 2.13: Non-zero pixels: 12419/50176 (24.75%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 8347
+Step 2.9: Pixels above 50 in matting_mask: 8980
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 0.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2 12]
+Raw facer_mask min/max before filtering: 0 2
+Unique values in facer_mask: [0 1 2]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(2, dtype=torch.uint8)
+EXPRESSION:  13
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/13.png
+Step 2.13: Non-zero pixels: 26092/50176 (52.00%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 23010
+Step 2.9: Pixels above 50 in matting_mask: 23786
+Step 2.10: Dynamic threshold used: 4.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 4.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5  6 10 11 12 13 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5  6 10 11 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  14
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/14.png
+Step 2.13: Non-zero pixels: 19498/50176 (38.86%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 13425
+Step 2.9: Pixels above 50 in matting_mask: 14589
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 191.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5 10 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2  5 10 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  15
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/15.png
+Step 2.13: Non-zero pixels: 23976/50176 (47.78%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 19957
+Step 2.9: Pixels above 50 in matting_mask: 21006
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5  6 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5  6 10 11 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  16
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/16.png
+Step 2.13: Non-zero pixels: 24585/50176 (49.00%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 20513
+Step 2.9: Pixels above 50 in matting_mask: 21520
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5  6 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5  6 10 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  17
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/17.png
+Step 2.13: Non-zero pixels: 26194/50176 (52.20%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 22428
+Step 2.9: Pixels above 50 in matting_mask: 23452
+Step 2.10: Dynamic threshold used: 4.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 4.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5  6 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5  6 10 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  18
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/18.png
+Step 2.13: Non-zero pixels: 25771/50176 (51.36%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 23148
+Step 2.9: Pixels above 50 in matting_mask: 23828
+Step 2.10: Dynamic threshold used: 3.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 3.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5  6 10 11 12 13 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5  6 10 11 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  19
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/19.png
+Step 2.13: Non-zero pixels: 23720/50176 (47.27%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 19858
+Step 2.9: Pixels above 50 in matting_mask: 21069
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5 10 11 12 13 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5 10 11 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  20
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/20.png
+Step 2.13: Non-zero pixels: 27185/50176 (54.18%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 22427
+Step 2.9: Pixels above 50 in matting_mask: 23501
+Step 2.10: Dynamic threshold used: 7.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 7.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5  6 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5  6 10 11 12 13 14 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  21
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/21.png
+Step 2.13: Non-zero pixels: 27009/50176 (53.83%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 22807
+Step 2.9: Pixels above 50 in matting_mask: 23911
+Step 2.10: Dynamic threshold used: 12.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 12.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5 10 11 12 13 14 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  22
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/22.png
+Step 2.13: Non-zero pixels: 21669/50176 (43.19%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 17363
+Step 2.9: Pixels above 50 in matting_mask: 18314
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5 10 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2  5 10 11 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  23
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/23.png
+Step 2.13: Non-zero pixels: 26219/50176 (52.25%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 22614
+Step 2.9: Pixels above 50 in matting_mask: 23758
+Step 2.10: Dynamic threshold used: 5.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 5.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5 10 11 12 13 14 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  24
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/24.png
+Step 2.13: Non-zero pixels: 17890/50176 (35.65%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 14372
+Step 2.9: Pixels above 50 in matting_mask: 15317
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 247.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2 10 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2 10 11 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  25
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/25.png
+Step 2.13: Non-zero pixels: 20608/50176 (41.07%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 17658
+Step 2.9: Pixels above 50 in matting_mask: 18375
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2 10 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2 10 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  26
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/26.png
+Step 2.13: Non-zero pixels: 24232/50176 (48.29%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 20352
+Step 2.9: Pixels above 50 in matting_mask: 21212
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5 10 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2  5 10 11 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  27
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/27.png
+Step 2.13: Non-zero pixels: 24416/50176 (48.66%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 20383
+Step 2.9: Pixels above 50 in matting_mask: 21222
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5 10 11 12 13 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  5 10 11 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  28
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/28.png
+Step 2.13: Non-zero pixels: 22028/50176 (43.90%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 18296
+Step 2.9: Pixels above 50 in matting_mask: 19266
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  5 10 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2 10 11 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  29
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/29.png
+Step 2.13: Non-zero pixels: 22884/50176 (45.61%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 19454
+Step 2.9: Pixels above 50 in matting_mask: 20362
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5 10 11 12 13 15]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2 10 11 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  30
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/30.png
+Step 2.13: Non-zero pixels: 23103/50176 (46.04%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 19403
+Step 2.9: Pixels above 50 in matting_mask: 20326
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5 10 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2  4  5 10 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  31
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/31.png
+Step 2.13: Non-zero pixels: 26387/50176 (52.59%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 23305
+Step 2.9: Pixels above 50 in matting_mask: 24074
+Step 2.10: Dynamic threshold used: 8.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 8.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5  6 10 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  4  6 10 12 13 14 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  32
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/32.png
+Step 2.13: Non-zero pixels: 27102/50176 (54.01%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 23833
+Step 2.9: Pixels above 50 in matting_mask: 24625
+Step 2.10: Dynamic threshold used: 21.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 21.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5  6 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  4  5  6 10 12 13 14 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  33
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/33.png
+Step 2.13: Non-zero pixels: 25730/50176 (51.28%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 22034
+Step 2.9: Pixels above 50 in matting_mask: 22856
+Step 2.10: Dynamic threshold used: 2.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 2.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5  6 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  4  6 10 12 13 14 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  34
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/34.png
+Step 2.13: Non-zero pixels: 25988/50176 (51.79%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 22931
+Step 2.9: Pixels above 50 in matting_mask: 23721
+Step 2.10: Dynamic threshold used: 3.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 3.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  4  5 10 12 13 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  35
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/35.png
+Step 2.13: Non-zero pixels: 26729/50176 (53.27%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 23776
+Step 2.9: Pixels above 50 in matting_mask: 24522
+Step 2.10: Dynamic threshold used: 19.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 19.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  6 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  4  6 10 11 12 13 14 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  36
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/36.png
+Step 2.13: Non-zero pixels: 23667/50176 (47.17%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 20364
+Step 2.9: Pixels above 50 in matting_mask: 21102
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5 10 11 12 13]
+Raw facer_mask min/max before filtering: 0 13
+Unique values in facer_mask: [ 0  1  2  4  5 10 11 12 13]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(13, dtype=torch.uint8)
+EXPRESSION:  37
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/37.png
+Step 2.13: Non-zero pixels: 29126/50176 (58.05%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 25855
+Step 2.9: Pixels above 50 in matting_mask: 26755
+Step 2.10: Dynamic threshold used: 192.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 192.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5  6 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  4  5  6 10 11 12 13 14 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  38
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/38.png
+Step 2.13: Non-zero pixels: 27902/50176 (55.61%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 24532
+Step 2.9: Pixels above 50 in matting_mask: 25400
+Step 2.10: Dynamic threshold used: 76.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 76.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5  6 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  4  5  6 10 12 13 14 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  39
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/39.png
+Step 2.13: Non-zero pixels: 26034/50176 (51.89%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 22539
+Step 2.9: Pixels above 50 in matting_mask: 23373
+Step 2.10: Dynamic threshold used: 4.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 4.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5  6 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  4  5  6 10 12 13 14 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+EXPRESSION:  40
+Loaded facer_mask from: /home/sam.caasi/scratch1/models/MonoNPHM/tracking_input/lrs30Fi83BHQsMA_00002/seg/40.png
+Step 2.13: Non-zero pixels: 24660/50176 (49.15%)
+Step 1: Raw facer_mask unique values: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.1: Raw facer_mask unique values before filtering: [ 0  1  2  3  4  5  6  7 10 11 12 13 14 15 20]
+Step 2.6: Unique values in foreground_mask BEFORE matting threshold: [False  True]
+Step 2.4: Unique values in matting_mask: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255]
+Step 2.5: Min/Max matting_mask: 0 255
+Step 2.8: Pixels above 127 in matting_mask: 20901
+Step 2.9: Pixels above 50 in matting_mask: 21761
+Step 2.10: Dynamic threshold used: 0.0
+Step 2.12: Percentile values in matting_mask -> 10th: 0.0, 25th: 0.0, 50th: 0.0, 75th: 254.0, 90th: 254.0
+Step 2.11: Unique values in foreground_mask AFTER dynamic threshold: [False  True]
+Step 2.7: Unique values in foreground_mask AFTER matting threshold: [False  True]
+Step 2.2: Unique values in facer_mask AFTER filtering: [ 0  1  2  4  5 10 11 12 13 14 15]
+Raw facer_mask min/max before filtering: 0 15
+Unique values in facer_mask: [ 0  1  2  4 10 12 13 14 15]
+facer_mask type: <class 'torch.Tensor'>
+facer_mask shape before flattening: torch.Size([1369])
+facer_mask min/max before conversion: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+Type of extracted mask: <class 'torch.Tensor'>
+Mask min/max in prepare_data: tensor(0, dtype=torch.uint8) tensor(15, dtype=torch.uint8)
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([749])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1254])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1271])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3158])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1803])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2569])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3257])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2284])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2843])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1422])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1184])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1247])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([403])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([1049])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3169])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3142])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2851])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1244])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3167])
+Mask min/max: 0 13
+Checking mask for expression 37, view 0
+torch.Size([37, 37])
+tensor(1464)
+foreground_index.shape: torch.Size([3096])
+Mask min/max: 0 13
+Checking mask for expression 25, view 0
+torch.Size([37, 37])
+tensor(537)
+foreground_index.shape: torch.Size([1682])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2707])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1851])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1878])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3425])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([3059])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([875])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2788])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([743])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2909])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2992])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1276])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1937])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2601])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2635])
+Mask min/max: 0 13
+Checking mask for expression 14, view 0
+torch.Size([37, 37])
+tensor(531)
+foreground_index.shape: torch.Size([1381])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3169])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2827])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([1031])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1757])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2865])
+Mask min/max: 0 13
+Checking mask for expression 31, view 0
+torch.Size([37, 37])
+tensor(1038)
+foreground_index.shape: torch.Size([2544])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2847])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2812])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2940])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2257])
+Mask min/max: 0 13
+Checking mask for expression 28, view 0
+torch.Size([37, 37])
+tensor(515)
+foreground_index.shape: torch.Size([1777])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2554])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([749])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([790])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2294])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([954])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3204])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2441])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3273])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2792])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([647])
+Mask min/max: 0 13
+Checking mask for expression 31, view 0
+torch.Size([37, 37])
+tensor(1038)
+foreground_index.shape: torch.Size([2579])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([972])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([1051])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3233])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2931])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3220])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2227])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2969])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2250])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([729])
+Mask min/max: 0 13
+Checking mask for expression 14, view 0
+torch.Size([37, 37])
+tensor(531)
+foreground_index.shape: torch.Size([1270])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2911])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([401])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3376])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2356])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([651])
+Mask min/max: 0 13
+Checking mask for expression 6, view 0
+torch.Size([37, 37])
+tensor(788)
+foreground_index.shape: torch.Size([1454])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([721])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1228])
+Mask min/max: 0 13
+Checking mask for expression 12, view 0
+torch.Size([37, 37])
+tensor(69)
+foreground_index.shape: torch.Size([426])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2282])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2484])
+Mask min/max: 0 13
+Checking mask for expression 14, view 0
+torch.Size([37, 37])
+tensor(531)
+foreground_index.shape: torch.Size([1339])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2737])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3290])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2868])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2731])
+Mask min/max: 0 13
+Checking mask for expression 15, view 0
+torch.Size([37, 37])
+tensor(1270)
+foreground_index.shape: torch.Size([2790])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2725])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3190])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([924])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2907])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([771])
+Mask min/max: 0 13
+Checking mask for expression 31, view 0
+torch.Size([37, 37])
+tensor(1038)
+foreground_index.shape: torch.Size([2496])
+Mask min/max: 0 13
+Checking mask for expression 5, view 0
+torch.Size([37, 37])
+tensor(302)
+foreground_index.shape: torch.Size([939])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([1994])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([735])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2242])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2578])
+Mask min/max: 0 13
+Checking mask for expression 29, view 0
+torch.Size([37, 37])
+tensor(554)
+foreground_index.shape: torch.Size([1969])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1205])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2550])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2735])
+Mask min/max: 0 13
+Checking mask for expression 39, view 0
+torch.Size([37, 37])
+tensor(1515)
+foreground_index.shape: torch.Size([3173])
+Mask min/max: 0 13
+Checking mask for expression 21, view 0
+torch.Size([37, 37])
+tensor(1516)
+foreground_index.shape: torch.Size([3207])
+Mask min/max: 0 13
+Checking mask for expression 9, view 0
+torch.Size([37, 37])
+tensor(630)
+foreground_index.shape: torch.Size([1777])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([727])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2881])
+Mask min/max: 0 13
+Checking mask for expression 23, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2891])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([655])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2585])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2906])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([1987])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1140])
+Mask min/max: 0 13
+Checking mask for expression 18, view 0
+torch.Size([37, 37])
+tensor(1239)
+foreground_index.shape: torch.Size([2973])
+Mask min/max: 0 13
+Checking mask for expression 35, view 0
+torch.Size([37, 37])
+tensor(1359)
+foreground_index.shape: torch.Size([2981])
+Mask min/max: 0 13
+Checking mask for expression 20, view 0
+torch.Size([37, 37])
+tensor(1561)
+foreground_index.shape: torch.Size([3377])
+Mask min/max: 0 13
+Checking mask for expression 17, view 0
+torch.Size([37, 37])
+tensor(1458)
+foreground_index.shape: torch.Size([3197])
+Mask min/max: 0 13
+Checking mask for expression 27, view 0
+torch.Size([37, 37])
+tensor(770)
+foreground_index.shape: torch.Size([2288])
+Mask min/max: 0 13
+Checking mask for expression 14, view 0
+torch.Size([37, 37])
+tensor(531)
+foreground_index.shape: torch.Size([1333])
+Mask min/max: 0 13
+Checking mask for expression 1, view 0
+torch.Size([37, 37])
+tensor(288)
+foreground_index.shape: torch.Size([972])
+Mask min/max: 0 13
+Checking mask for expression 36, view 0
+torch.Size([37, 37])
+tensor(641)
+foreground_index.shape: torch.Size([2291])
+Mask min/max: 0 13
+Checking mask for expression 10, view 0
+torch.Size([37, 37])
+tensor(1342)
+foreground_index.shape: torch.Size([2998])
+Mask min/max: 0 13
+Checking mask for expression 22, view 0
+torch.Size([37, 37])
+tensor(732)
+foreground_index.shape: torch.Size([2244])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2397])
+Mask min/max: 0 13
+Checking mask for expression 11, view 0
+torch.Size([37, 37])
+tensor(848)
+foreground_index.shape: torch.Size([2207])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([653])
+Mask min/max: 0 13
+Checking mask for expression 16, view 0
+torch.Size([37, 37])
+tensor(1349)
+foreground_index.shape: torch.Size([3062])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2869])
+Mask min/max: 0 13
+Checking mask for expression 0, view 0
+torch.Size([37, 37])
+tensor(216)
+foreground_index.shape: torch.Size([787])
+Mask min/max: 0 13
+Checking mask for expression 38, view 0
+torch.Size([37, 37])
+tensor(1481)
+foreground_index.shape: torch.Size([3006])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2549])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2564])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2705])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([1975])
+Mask min/max: 0 13
+Checking mask for expression 24, view 0
+torch.Size([37, 37])
+tensor(421)
+foreground_index.shape: torch.Size([1262])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([675])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1210])
+Mask min/max: 0 13
+Checking mask for expression 30, view 0
+torch.Size([37, 37])
+tensor(550)
+foreground_index.shape: torch.Size([1958])
+Mask min/max: 0 13
+Checking mask for expression 34, view 0
+torch.Size([37, 37])
+tensor(977)
+foreground_index.shape: torch.Size([2558])
+Mask min/max: 0 13
+Checking mask for expression 13, view 0
+torch.Size([37, 37])
+tensor(1232)
+foreground_index.shape: torch.Size([2670])
+Mask min/max: 0 13
+Checking mask for expression 40, view 0
+torch.Size([37, 37])
+tensor(745)
+foreground_index.shape: torch.Size([2515])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1894])
+Mask min/max: 0 13
+Checking mask for expression 19, view 0
+torch.Size([37, 37])
+tensor(1077)
+foreground_index.shape: torch.Size([2612])
+Mask min/max: 0 13
+Checking mask for expression 31, view 0
+torch.Size([37, 37])
+tensor(1038)
+foreground_index.shape: torch.Size([2514])
+Mask min/max: 0 13
+Checking mask for expression 8, view 0
+torch.Size([37, 37])
+tensor(624)
+foreground_index.shape: torch.Size([1820])
+Mask min/max: 0 13
+Checking mask for expression 26, view 0
+torch.Size([37, 37])
+tensor(660)
+foreground_index.shape: torch.Size([2027])
+Mask min/max: 0 13
+Checking mask for expression 2, view 0
+torch.Size([37, 37])
+tensor(206)
+foreground_index.shape: torch.Size([662])
+Mask min/max: 0 13
+Checking mask for expression 3, view 0
+torch.Size([37, 37])
+tensor(461)
+foreground_index.shape: torch.Size([1237])
+Mask min/max: 0 13
+Checking mask for expression 14, view 0
+torch.Size([37, 37])
+tensor(531)
+foreground_index.shape: torch.Size([1369])
+Mask min/max: 0 13
+Checking mask for expression 32, view 0
+torch.Size([37, 37])
+tensor(1283)
+foreground_index.shape: torch.Size([2841])
+Mask min/max: 0 13
+Checking mask for expression 4, view 0
+torch.Size([37, 37])
+tensor(212)
+foreground_index.shape: torch.Size([688])
+Mask min/max: 0 13

@@ -1,0 +1,383 @@
+CUDA_DEVICE=/dev/nvidia/0
+Thu Mar 20 10:01:23 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:0B:00.0 Off |                    0 |
+| N/A   25C    P0             57W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Module load: anaconda/3-2023.07-2
+Looking in links: https://data.pyg.org/whl/torch-2.0.0+cu121.html
+Collecting pyg_lib
+  Using cached https://data.pyg.org/whl/torch-2.0.0%2Bcu121/pyg_lib-0.4.0%2Bpt20cu121-cp39-cp39-linux_x86_64.whl (2.5 MB)
+Collecting torch_scatter
+  Using cached torch_scatter-2.1.2.tar.gz (108 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting torch_sparse
+  Using cached torch_sparse-0.6.18.tar.gz (209 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting torch_cluster
+  Using cached torch_cluster-1.6.3.tar.gz (54 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting torch_spline_conv
+  Using cached torch_spline_conv-1.2.2.tar.gz (25 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: scipy in /scratch1/sam.caasi/miniconda3/envs/mononphm-cuda127/lib/python3.9/site-packages (from torch_sparse) (1.13.1)
+Requirement already satisfied: numpy<2.3,>=1.22.4 in /scratch1/sam.caasi/miniconda3/envs/mononphm-cuda127/lib/python3.9/site-packages (from scipy->torch_sparse) (2.0.2)
+Building wheels for collected packages: torch_scatter, torch_sparse, torch_cluster, torch_spline_conv
+  Building wheel for torch_scatter (setup.py): started
+  Building wheel for torch_scatter (setup.py): still running...
+  Building wheel for torch_scatter (setup.py): still running...
+  Building wheel for torch_scatter (setup.py): still running...
+  Building wheel for torch_scatter (setup.py): finished with status 'done'
+  Created wheel for torch_scatter: filename=torch_scatter-2.1.2-cp39-cp39-linux_x86_64.whl size=480820 sha256=cd0a5f842f063cc74b769b53357d5b4ad55c37a873585e7724e7ed4149383089
+  Stored in directory: /home/sam.caasi/.cache/pip/wheels/b8/9c/c0/d261e1e64cc49e6b14dd7319d8b61eb14168529d810dbba00e
+  Building wheel for torch_sparse (setup.py): started
+  Building wheel for torch_sparse (setup.py): still running...
+  Building wheel for torch_sparse (setup.py): still running...
+  Building wheel for torch_sparse (setup.py): still running...
+  Building wheel for torch_sparse (setup.py): still running...
+  Building wheel for torch_sparse (setup.py): still running...
+  Building wheel for torch_sparse (setup.py): still running...
+  Building wheel for torch_sparse (setup.py): still running...
+  Building wheel for torch_sparse (setup.py): finished with status 'done'
+  Created wheel for torch_sparse: filename=torch_sparse-0.6.18-cp39-cp39-linux_x86_64.whl size=1012470 sha256=bd1fb1697de64fa4e7b2be966f77a4ba12cab15e60eb0ef9235ca8cf8bdad170
+  Stored in directory: /home/sam.caasi/.cache/pip/wheels/c0/15/18/881c60adefeb60882987c23aa5ecced0ab7257c3162acab518
+  Building wheel for torch_cluster (setup.py): started
+  Building wheel for torch_cluster (setup.py): still running...
+  Building wheel for torch_cluster (setup.py): still running...
+  Building wheel for torch_cluster (setup.py): still running...
+  Building wheel for torch_cluster (setup.py): still running...
+  Building wheel for torch_cluster (setup.py): still running...
+  Building wheel for torch_cluster (setup.py): finished with status 'done'
+  Created wheel for torch_cluster: filename=torch_cluster-1.6.3-cp39-cp39-linux_x86_64.whl size=713575 sha256=d951cedd394f398758f50c1f92f7ac5423b483b9fd3e777aae2f2267d891ec12
+  Stored in directory: /home/sam.caasi/.cache/pip/wheels/fc/55/f3/d8a310d8f0c29653a7580789f3b53f15e3cd2e88ff8ed5eeb5
+  Building wheel for torch_spline_conv (setup.py): started
+  Building wheel for torch_spline_conv (setup.py): still running...
+  Building wheel for torch_spline_conv (setup.py): finished with status 'done'
+  Created wheel for torch_spline_conv: filename=torch_spline_conv-1.2.2-cp39-cp39-linux_x86_64.whl size=198699 sha256=ea0a97d4d1e2745b435b89c070c280677a5bc66aba5f72004671df32bc6b5410
+  Stored in directory: /home/sam.caasi/.cache/pip/wheels/58/f8/af/928307700e029de11dd581e4a466b4c906bb0764d2d4b591f0
+Successfully built torch_scatter torch_sparse torch_cluster torch_spline_conv
+Installing collected packages: torch_spline_conv, torch_scatter, pyg_lib, torch_sparse, torch_cluster
+Successfully installed pyg_lib-0.4.0+pt20cu121 torch_cluster-1.6.3 torch_scatter-2.1.2 torch_sparse-0.6.18 torch_spline_conv-1.2.2
+Channels:
+ - fvcore
+ - iopath
+ - conda-forge
+ - defaults
+ - nvidia
+ - pyg
+ - pytorch
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /home/sam.caasi/scratch1/miniconda3/envs/mononphm-cuda127
+
+  added / updated specs:
+    - fvcore
+    - iopath
+
+
+The following NEW packages will be INSTALLED:
+
+  fvcore             conda-forge/noarch::fvcore-0.1.5.post20221221-pyhd8ed1ab_0 
+  iopath             iopath/linux-64::iopath-0.1.9-py39 
+  portalocker        conda-forge/linux-64::portalocker-3.0.0-py39hf3d152e_0 
+  pyyaml             conda-forge/linux-64::pyyaml-6.0.2-py39h9399b63_2 
+  tabulate           conda-forge/noarch::tabulate-0.9.0-pyhd8ed1ab_2 
+  termcolor          conda-forge/noarch::termcolor-2.5.0-pyhd8ed1ab_1 
+  yacs               conda-forge/noarch::yacs-0.1.8-pyh29332c3_2 
+  yaml               conda-forge/linux-64::yaml-0.2.5-h7f98852_2 
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - \ | / - done
+Verifying transaction: | / - \ | / - \ | / - \ | / - \ | / - \ done
+Executing transaction: / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ done
+Channels:
+ - pytorch3d
+ - conda-forge
+ - defaults
+ - nvidia
+ - iopath
+ - pyg
+ - pytorch
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /home/sam.caasi/scratch1/miniconda3/envs/mononphm-cuda127
+
+  added / updated specs:
+    - pytorch3d=0.7.4
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    blas-2.131                 |         openblas          16 KB  conda-forge
+    blas-devel-3.9.0           |31_h1ea3ea9_openblas          16 KB  conda-forge
+    libblas-3.9.0              |31_h59b9bed_openblas          16 KB  conda-forge
+    libcblas-3.9.0             |31_he106b2a_openblas          16 KB  conda-forge
+    liblapack-3.9.0            |31_h7ac8fdf_openblas          16 KB  conda-forge
+    liblapacke-3.9.0           |31_he2f377e_openblas          16 KB  conda-forge
+    libopenblas-0.3.29         |pthreads_h94d23a6_0         5.6 MB  conda-forge
+    openblas-0.3.29            |pthreads_h6ec200e_0         5.8 MB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        11.5 MB
+
+The following NEW packages will be INSTALLED:
+
+  blas-devel         conda-forge/linux-64::blas-devel-3.9.0-31_h1ea3ea9_openblas 
+  liblapacke         conda-forge/linux-64::liblapacke-3.9.0-31_he2f377e_openblas 
+  libopenblas        conda-forge/linux-64::libopenblas-0.3.29-pthreads_h94d23a6_0 
+  libprotobuf        conda-forge/linux-64::libprotobuf-3.20.3-h3eb15da_0 
+  ninja              conda-forge/linux-64::ninja-1.12.1-h297d8ca_0 
+  openblas           conda-forge/linux-64::openblas-0.3.29-pthreads_h6ec200e_0 
+  pytorch3d          conda-forge/linux-64::pytorch3d-0.7.4-cpu_py39hea7323b_1 
+
+The following packages will be UPDATED:
+
+  blas                                              1.0-mkl --> 2.131-openblas 
+  libblas                              3.9.0-16_linux64_mkl --> 3.9.0-31_h59b9bed_openblas 
+  libcblas                             3.9.0-16_linux64_mkl --> 3.9.0-31_he106b2a_openblas 
+  liblapack                            3.9.0-16_linux64_mkl --> 3.9.0-31_h7ac8fdf_openblas 
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  pytorch                pytorch::pytorch-2.0.1-py3.9_cpu_0 --> pkgs/main::pytorch-2.0.1-cpu_py39hab5cca8_0 
+
+The following packages will be DOWNGRADED:
+
+  numpy                                2.0.2-py39h9cb892a_1 --> 1.26.4-py39h474f0d3_0 
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages: ...working...openblas-0.3.29      | 5.8 MB    |            |   0% 
+libopenblas-0.3.29   | 5.6 MB    |            |   0% [A
+
+libblas-3.9.0        | 16 KB     |            |   0% [A[A
+
+
+liblapacke-3.9.0     | 16 KB     |            |   0% [A[A[A
+
+
+
+blas-devel-3.9.0     | 16 KB     |            |   0% [A[A[A[A
+
+
+
+
+libcblas-3.9.0       | 16 KB     |            |   0% [A[A[A[A[A
+
+
+
+
+
+liblapack-3.9.0      | 16 KB     |            |   0% [A[A[A[A[A[A
+
+
+
+
+
+
+blas-2.131           | 16 KB     |            |   0% [A[A[A[A[A[A[A
+
+
+liblapacke-3.9.0     | 16 KB     | #########7 |  97% [A[A[A
+
+
+
+blas-devel-3.9.0     | 16 KB     | #########7 |  97% [A[A[A[A
+libopenblas-0.3.29   | 5.6 MB    |            |   0% [A
+
+libblas-3.9.0        | 16 KB     | #########7 |  97% [A[Aopenblas-0.3.29      | 5.8 MB    |            |   0% 
+
+
+liblapacke-3.9.0     | 16 KB     | ########## | 100% [A[A[A
+
+
+
+blas-devel-3.9.0     | 16 KB     | ########## | 100% [A[A[A[A
+
+libblas-3.9.0        | 16 KB     | ########## | 100% [A[A
+
+
+
+
+
+liblapack-3.9.0      | 16 KB     | #########7 |  98% [A[A[A[A[A[A
+
+
+
+
+
+
+blas-2.131           | 16 KB     | #########8 |  98% [A[A[A[A[A[A[A
+
+
+
+
+libcblas-3.9.0       | 16 KB     | #########7 |  98% [A[A[A[A[A
+
+
+
+
+
+liblapack-3.9.0      | 16 KB     | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+
+blas-2.131           | 16 KB     | ########## | 100% [A[A[A[A[A[A[A
+
+
+
+
+libcblas-3.9.0       | 16 KB     | ########## | 100% [A[A[A[A[A
+libopenblas-0.3.29   | 5.6 MB    | 5          |   5% [Aopenblas-0.3.29      | 5.8 MB    | 5          |   6% 
+libopenblas-0.3.29   | 5.6 MB    | ##         |  20% [Aopenblas-0.3.29      | 5.8 MB    | ###1       |  32% 
+
+
+
+blas-devel-3.9.0     | 16 KB     | ########## | 100% [A[A[A[A
+
+libblas-3.9.0        | 16 KB     | ########## | 100% [A[A
+
+
+liblapacke-3.9.0     | 16 KB     | ########## | 100% [A[A[A
+libopenblas-0.3.29   | 5.6 MB    | #######5   |  75% [Aopenblas-0.3.29      | 5.8 MB    | ######6    |  67% 
+libopenblas-0.3.29   | 5.6 MB    | ########## | 100% [Aopenblas-0.3.29      | 5.8 MB    | ########## | 100% 
+
+
+
+
+
+
+blas-2.131           | 16 KB     | ########## | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+liblapack-3.9.0      | 16 KB     | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+libcblas-3.9.0       | 16 KB     | ########## | 100% [A[A[A[A[A
+libopenblas-0.3.29   | 5.6 MB    | ########## | 100% [A
+libopenblas-0.3.29   | 5.6 MB    | ########## | 100% [Aopenblas-0.3.29      | 5.8 MB    | ########## | 100% openblas-0.3.29      | 5.8 MB    | ########## | 100%                                                      
+                                                     [A
+
+                                                     [A[A
+
+
+                                                     [A[A[A
+
+
+
+                                                     [A[A[A[A
+
+
+
+
+                                                     [A[A[A[A[A
+
+
+
+
+
+                                                     [A[A[A[A[A[A
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A done
+Preparing transaction: - \ | / - \ | / done
+Verifying transaction: \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+Executing transaction: - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - done
+Found existing installation: numpy 1.26.4
+Uninstalling numpy-1.26.4:
+  Would remove:
+    /scratch1/sam.caasi/miniconda3/envs/mononphm-cuda127/bin/f2py
+    /scratch1/sam.caasi/miniconda3/envs/mononphm-cuda127/lib/python3.9/site-packages/numpy-1.26.4.dist-info/*
+    /scratch1/sam.caasi/miniconda3/envs/mononphm-cuda127/lib/python3.9/site-packages/numpy/*
+Proceed (Y/n)? ERROR: Exception:
+Traceback (most recent call last):
+  File "/home/sam.caasi/scratch1/miniconda3/envs/mononphm-cuda127/lib/python3.9/site-packages/pip/_internal/cli/base_command.py", line 106, in _run_wrapper
+    status = _inner_run()
+  File "/home/sam.caasi/scratch1/miniconda3/envs/mononphm-cuda127/lib/python3.9/site-packages/pip/_internal/cli/base_command.py", line 97, in _inner_run
+    return self.run(options, args)
+  File "/home/sam.caasi/scratch1/miniconda3/envs/mononphm-cuda127/lib/python3.9/site-packages/pip/_internal/commands/uninstall.py", line 106, in run
+    uninstall_pathset = req.uninstall(
+  File "/home/sam.caasi/scratch1/miniconda3/envs/mononphm-cuda127/lib/python3.9/site-packages/pip/_internal/req/req_install.py", line 723, in uninstall
+    uninstalled_pathset.remove(auto_confirm, verbose)
+  File "/home/sam.caasi/scratch1/miniconda3/envs/mononphm-cuda127/lib/python3.9/site-packages/pip/_internal/req/req_uninstall.py", line 364, in remove
+    if auto_confirm or self._allowed_to_proceed(verbose):
+  File "/home/sam.caasi/scratch1/miniconda3/envs/mononphm-cuda127/lib/python3.9/site-packages/pip/_internal/req/req_uninstall.py", line 404, in _allowed_to_proceed
+    return ask("Proceed (Y/n)? ", ("y", "n", "")) != "n"
+  File "/home/sam.caasi/scratch1/miniconda3/envs/mononphm-cuda127/lib/python3.9/site-packages/pip/_internal/utils/misc.py", line 229, in ask
+    response = input(message)
+EOFError: EOF when reading a line
+Collecting numpy==1.23
+  Using cached numpy-1.23.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.2 kB)
+Using cached numpy-1.23.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+Installing collected packages: numpy
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.26.4
+    Uninstalling numpy-1.26.4:
+      Successfully uninstalled numpy-1.26.4
+Successfully installed numpy-1.23.0
+Collecting pyopengl==3.1.5
+  Using cached PyOpenGL-3.1.5-py3-none-any.whl.metadata (3.2 kB)
+Using cached PyOpenGL-3.1.5-py3-none-any.whl (2.4 MB)
+Installing collected packages: pyopengl
+Successfully installed pyopengl-3.1.5
+Obtaining file:///scratch1/sam.caasi/models/MonoNPHM
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: mononphm
+  Building editable for mononphm (pyproject.toml): started
+  Building editable for mononphm (pyproject.toml): finished with status 'done'
+  Created wheel for mononphm: filename=mononphm-0.0.1-0.editable-py3-none-any.whl size=6313 sha256=4b4261281cd042f65504b0da7cf26be8079521e5aeb252226078ff4cc0b5c3bc
+  Stored in directory: /tmp/pip-ephem-wheel-cache-trqww7y2/wheels/ff/25/24/b1fcdf48f24630403f03fb91a8695f9e26c352dc1145ae2be3
+Successfully built mononphm
+Installing collected packages: mononphm
+Successfully installed mononphm-0.0.1

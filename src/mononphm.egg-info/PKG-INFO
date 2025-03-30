@@ -1,4 +1,4 @@
-Metadata-Version: 2.2
+Metadata-Version: 2.4
 Name: mononphm
 Version: 0.0.1
 Summary: <<<ENTER_DESCRIPTION>>
@@ -12,6 +12,7 @@ Requires-Python: >=3.7.0
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Provides-Extra: dev
+Dynamic: license-file
 
 #  MonoNPHM: Dynamic Head Reconstruction from Monoculuar Videos
 [**Paper**](https://arxiv.org/abs/2312.06740) | [**Video**](https://www.youtube.com/watch?v=n-wjaC3UIeE) | [**Project Page**](https://simongiebenhain.github.io/MonoNPHM/) <br>

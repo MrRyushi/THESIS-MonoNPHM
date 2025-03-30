@@ -316,6 +316,7 @@ class SimpleDataManager:
         mouth_interiors = []
 
         for expression in expressions:
+            print("EXPRESSION: ", expression)
 
             res_cleaned = prepare_data(timestep=expression, seq_name=seq_name,
                                        downsample_factor=downsampling_factor,
@@ -330,6 +331,10 @@ class SimpleDataManager:
             intrinsics.append(res_cleaned['intrinsics'])
             lms.append(res_cleaned['landmarks_2d'])
             mouth_interiors.append(res_cleaned['mouth_interior_mask'])
+
+        mask = res_cleaned['segmentation_mask'][0]  # Extract the actual mask
+        print("Type of extracted mask:", type(mask))
+        print("Mask min/max in prepare_data:", mask.min(), mask.max())
 
 
         all_detected_lms = np.load(f'{env_paths.DATA_TRACKING}/{seq_name}/pipnet/test.npy')
@@ -375,11 +380,20 @@ class SimpleDataManager:
         current_expression = np.random.randint(0, len(self.expressions))
         rnd_idx = np.random.randint(0, self.num_views)
 
+        print("Mask min/max:", self.masks[0][0].min().item(), self.masks[0][0].max().item())
+
+
+        print(f"Checking mask for expression {current_expression}, view {rnd_idx}")
+        print(self.masks[current_expression][rnd_idx].shape)
+        print(self.masks[current_expression][rnd_idx].sum())  # Should be > 0 if there are foreground pixels
+
+
         # subsample rays, add batch_dim, push to GPU
         selected_rays_w = torch.randint(0 + 2, self.ws[current_expression][rnd_idx] - 2,
                                         [10000])
         selected_rays_h = torch.randint(0 + 2, self.hs[current_expression][rnd_idx] - 2,
                                         [10000])
+                                        
         gt_rgb = self.rgbs[current_expression][rnd_idx][selected_rays_h, selected_rays_w, :].unsqueeze(0).cuda().float()
         gt_mm = self.mms[current_expression][rnd_idx][selected_rays_h, selected_rays_w].unsqueeze(0).cuda().float()
 
@@ -389,6 +403,7 @@ class SimpleDataManager:
         gt_cam_pos = self.cam_poss[current_expression][rnd_idx].unsqueeze(0).cuda().float()
 
         foreground_index = torch.nonzero(gt_mask)[:, 1]
+        print(f"foreground_index.shape: {foreground_index.shape}")  # Debug print
         selected_forground = torch.randint(0, foreground_index.shape[0], [int(self.cfg['opt']['rays_per_batch'] * 0.75)])
         selected_others = torch.randint(0, 10000,
                                         [self.cfg['opt']['rays_per_batch'] - int(self.cfg['opt']['rays_per_batch'] * 0.75)])

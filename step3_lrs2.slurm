@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J EN2-L-512
-#SBATCH --partition=gpu
-#SBATCH --qos=gpu-p40_default
+#SBATCH --partition=gpu_a100
+#SBATCH --qos=gpu-a100_default
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem-per-cpu=32GB
@@ -17,6 +17,10 @@ module load anaconda
 
 source ~/scratch1/miniconda3/etc/profile.d/conda.sh
 conda activate mononphm
+
+
+python -c "import torch; print(torch.__version__, torch.cuda.is_available(), torch.version.cuda)"
+python -c "import cv2; print(cv2.__version__)"
 
 # Define the directories
 DATASET_DIR="tracking_input"
